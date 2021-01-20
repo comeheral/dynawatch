@@ -1,0 +1,120 @@
+
+
+.nav{
+    height: 60px;
+    width: 100vw;
+    background: $white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 32px;
+    left: 0;
+    z-index: 98;
+
+    display: flex;
+    align-items: center;
+
+    &__logo{
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-up(lg){
+            left: 40px;
+            transform: translateX(0);
+        }
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 40px;
+    }
+
+    &__list{
+        display: none;
+        @include media-breakpoint-up(lg){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+        margin-right: 40px;
+
+        a{
+            font-family: $title-font;
+            font-size: 16px;
+            font-weight: 700;
+            color: $dark;
+            text-decoration: none;
+        }
+    }
+
+    &__button{
+        display: none !important;
+
+        @include media-breakpoint-up(lg){
+            display: flex !important;
+            margin: 0 !important;
+            margin-right: 40px !important;
+        }
+    }
+
+    &__icon{
+        height: 20px;
+    }
+
+
+    .burger-toggle{
+        display: block;
+        position: absolute;
+        left: 40px;
+        height: 20px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+
+        &__bar{
+            height: 2px;
+            width: 25px;
+            background: $black;
+
+            &:before, &:after{
+                content: '';
+                height: 2px;
+                width: 25px;
+                background: $black;
+                position: absolute;
+                left: 0;
+                transform: translateX(0);
+                transition: transform .4s;
+            }
+
+            &:before{
+                top: 0;
+            }
+
+            &:after{
+                bottom: 0;
+            }
+        }
+
+        &.-active{
+            .burger-toggle__bar{
+                &:before, &:after{
+                    transform: translateX(7px);
+                }
+            }
+        }
+    }
+}

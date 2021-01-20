@@ -1,0 +1,61 @@
+.title{
+    font-family: $title-font;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 20px;
+
+    &.-primary{font-size: 60px;}
+    &.-secondary{font-size: 48px;}
+    &.-tertiary{font-size: 36px;}
+    &.-custom{
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &.-white{
+        color: $white;
+    }
+
+    &.-gradient{
+        display: inline-block;
+        background: linear-gradient(94.33deg, $yellow 0%, $red 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.text{
+    max-width: 800px;
+    font-family: $text-font;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 160%;
+    margin-bottom: 20px;
+
+    strong{
+        font-weight: normal;
+        color: #000000;
+    }
+
+    &.-white{
+        color: rgba(255, 255, 255, 0.5);
+
+        strong{color: #ffffff;}
+    }
+
+    &.-small{
+        font-size: 16px;
+    }
+}
+
+.price{
+    font-family: $text-font;
+    font-size: 24px;
+    font-weight: 300;
+
+    span{
+        font-weight: 500;
+    }
+}

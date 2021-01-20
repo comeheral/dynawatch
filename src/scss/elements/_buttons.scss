@@ -1,0 +1,67 @@
+.button{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 220px !important;
+    height: 50px !important;
+    border-radius: 4px !important;
+    margin-bottom: 20px !important;
+    border: 0 !important;
+    cursor: pointer !important;
+
+    font-family: $title-font !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: $white !important;
+    text-decoration: none !important;
+    transition: opacity .2s !important;
+
+    &.-small{
+        width: 110px !important;
+        height: 30px !important;
+        font-size: 14px !important;
+    }
+
+    &.-long{
+        width: 315px !important;
+    }
+
+    &.-gradient{
+        background: linear-gradient(94.33deg, $red 0%, $yellow 100%) !important;
+        box-shadow: 0px 4px 10px rgba(255, 162, 114, 0.4) !important;
+    }
+
+    &.-dark{
+        background: $dark !important;
+    }
+
+    &__icon{
+        height: 20px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    &:hover{
+        opacity: .8;
+    }
+}
+
+
+.arrowlink{
+    font-family: $text-font;
+    font-size: 24px;
+    font-weight: 400;
+    color: $black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    svg{
+        margin-left: 10px;
+    }
+
+    &.-custom{
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+}

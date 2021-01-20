@@ -1,0 +1,22 @@
+$maxColumns: 12;
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@function calculate-width($number){
+    @return $number/$maxColumns * 100%;
+}
+
+@for $i from 1 through $maxColumns{
+    .col-#{$i}{
+        flex-basis: calculate-width($i);
+        max-width: calculate-width($i);
+    }   
+}

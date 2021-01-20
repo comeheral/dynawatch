@@ -1,0 +1,203 @@
+#product{
+
+    .variants-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .product-step{
+        min-height: calc(100vh - 60px);
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .image{width: 100%;}
+    .price{
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .text{line-height: 26px;}
+
+    .arrowlink, .button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .edition{
+        &__title{
+            margin-bottom: 60px;
+        }
+
+        .toggle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            margin-bottom: 20px;
+
+            &__title{
+                padding-bottom: 4px;
+                white-space: nowrap;
+                &.-active{
+                    border-bottom: 1px solid $dark;
+                }
+            }
+        }
+    }
+
+
+    .style{
+        &__title{margin-bottom: 30px;}
+
+        &__container{
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        &__case{
+            margin-right: 40px;
+            .case-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 138px;
+                height: 50px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+
+                .case-select{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background: grey;
+                    transition: all .1s;
+                }
+
+                &.-active{
+                    border: 3px solid $black;
+                    .case-select{
+                        width: 124px;
+                        height: 36px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        &__band{
+            .band-item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+
+                .band-select{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    background: grey;
+                    transition: all .1s;
+                }
+
+                &.-active{
+                    border: 3px solid $black;
+                    .band-select{
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+
+        .case-desc, .band-desc{
+            .title{
+                text-transform: none;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+    .color{
+        &__title{margin-bottom: 60px;}
+        .color-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+
+            .color-select{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: grey;
+                transition: all .1s;
+            }
+
+            &.-active{
+                border: 3px solid $black;
+                .color-select{
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+
+    .size{
+        .size-item{
+            background: $white;
+            border: 2px solid $dark;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            cursor: pointer;
+            transition: all .1s;
+
+            span{
+                font-family: $text-font;
+                font-size: 16px;
+                font-weight: normal;
+                color: $dark;
+                transition: all .1s;
+            }
+
+            &.case-size{
+                width: 90px;
+                height: 40px;
+                margin-right: 30px;
+            }
+
+            &.band-size{
+                width: 40px;
+                height: 40px;
+                margin-right: 16px;
+            }
+
+            &.-active{
+                background: $dark;
+                span{color: $white;}
+            }
+        }
+    }
+}
