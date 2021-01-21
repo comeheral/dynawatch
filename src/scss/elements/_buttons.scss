@@ -55,9 +55,16 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    width: fit-content;
 
     svg{
         margin-left: 10px;
+        transform: translateX(0);
+        transition: transform .2s;
+    }
+
+    &:hover svg{
+        transform: translateX(10px);
     }
 
     &.-custom{

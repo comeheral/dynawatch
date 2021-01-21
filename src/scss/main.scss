@@ -20,12 +20,19 @@
 
 //Import pages
 @import './pages/product';
+@import './pages/homepage';
 
 body{
     margin-top: 60px;
     &.-noscroll{
         overflow: hidden;
     }
+}
+
+.v-centered{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 }
 
 .gris{

@@ -7,16 +7,16 @@ if( have_posts() ):
 
         $postId = get_the_ID();
         $postData = get_post($postID);
+    ?>
 
-        $tagline = get_field('home_tagline');
 
-        echo "<div class='container'>";
+        <div class="home-banner">
+        <?php get_template_part('template-parts/home-banner'); ?>
+        </div>
 
-        get_template_part('template-parts/home-sections');
-
-        echo "</div>";
-
-        ?>
+        <div class="container">
+            <?php get_template_part('template-parts/home-sections'); ?>
+        </div> 
 
         <?php
 

@@ -74,9 +74,7 @@
             <a class="button nav__button -small -gradient" href="#">Acheter</a>
 
             <a class="nav__icon cart" href="#">
-                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.79449 4.39625C8.05361 3.09 9.20595 2.10527 10.5883 2.10527C11.9706 2.10527 13.123 3.09 13.3821 4.39625H7.79449ZM5.66572 4.39625C5.94266 1.92282 8.04093 0 10.5883 0C13.1357 0 15.2339 1.92282 15.5109 4.39625H18.9474L21.1765 20H0L2.22911 4.39625H5.66572ZM2.4274 17.8947L4.055 6.50151H17.1215L18.7491 17.8947H2.4274Z" fill="black"/>
-                </svg>
+                <?php get_template_part('icons/cart') ?>
             </a>
         </div>
 

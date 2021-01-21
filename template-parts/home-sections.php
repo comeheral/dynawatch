@@ -33,15 +33,15 @@
 
             ?>
 
-            <div class="row"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
-                <div class="col-6">
+            <div class="row home-section"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
+                <div class="col-12 col-md-6 v-centered">
                     <img style="width: 100%;" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                 </div>
 
-                <div class="col-6">
-                    <h2><?php echo $title; ?></h2>
-                    <p><?php echo $description ?></p>
-                    <a href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
+                <div class="col-12 col-md-6 v-centered">
+                    <h2 class="title -secondary"><?php echo $title; ?></h2>
+                    <p class="text"><?php echo $description ?></p>
+                    <a class="arrowlink" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?><?php get_template_part('icons/gradient-arrow') ?></a>
                 </div>
             </div>
 
