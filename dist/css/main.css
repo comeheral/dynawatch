@@ -3567,10 +3567,14 @@ ul {
   background: #2C2C2C !important;
 }
 
-.button__icon {
+.button svg {
   height: 20px;
   width: auto;
   margin-right: 8px;
+}
+
+.button svg path {
+  fill: #ffffff;
 }
 
 .button:hover {
@@ -3579,13 +3583,19 @@ ul {
 
 .arrowlink {
   font-family: "Rubik", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
   display: flex;
   align-items: center;
   width: fit-content;
+}
+
+@media (min-width: 992px) {
+  .arrowlink {
+    font-size: 24px;
+  }
 }
 
 .arrowlink svg {
@@ -3611,7 +3621,13 @@ ul {
 }
 
 .title.-primary {
-  font-size: 60px;
+  font-size: 40px;
+}
+
+@media (min-width: 992px) {
+  .title.-primary {
+    font-size: 60px;
+  }
 }
 
 .title.-secondary {
@@ -4081,8 +4097,69 @@ ul {
   color: #ffffff;
 }
 
+.home-banner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: calc(100vh - 60px);
+}
+
+.home-banner .banner-title {
+  max-width: 900px;
+}
+
+.home-banner .banner-price {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #2C2C2C;
+}
+
+.home-banner .banner-price strong {
+  font-weight: 500;
+}
+
+.home-banner .banner-blob {
+  position: absolute;
+  z-index: -1;
+  width: 140px;
+}
+
+.home-banner .banner-blob.blob-1 {
+  top: 0;
+  right: 0;
+}
+
+.home-banner .banner-blob.blob-2 {
+  bottom: 200px;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .home-banner .banner-blob {
+    width: auto;
+  }
+  .home-banner .banner-blob.blob-2 {
+    bottom: 60px;
+  }
+}
+
 .home-section {
   margin-top: 140px;
+}
+
+.home-section .section-image {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .home-section .section-image {
+    margin: 0;
+  }
 }
 
 body {

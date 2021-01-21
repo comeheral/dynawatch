@@ -35,10 +35,14 @@
         background: $dark !important;
     }
 
-    &__icon{
+    svg{
         height: 20px;
         width: auto;
         margin-right: 8px;
+
+        path{
+            fill: $white;
+        }
     }
 
     &:hover{
@@ -49,13 +53,17 @@
 
 .arrowlink{
     font-family: $text-font;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: $black;
     text-decoration: none;
     display: flex;
     align-items: center;
     width: fit-content;
+
+    @include media-breakpoint-up(lg){
+        font-size: 24px;
+    }
 
     svg{
         margin-left: 10px;

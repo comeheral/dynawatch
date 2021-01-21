@@ -11,7 +11,7 @@ if( have_posts() ):
 
 
         <div class="home-banner">
-        <?php get_template_part('template-parts/home-banner'); ?>
+            <?php get_template_part('template-parts/home-banner'); ?>
         </div>
 
         <div class="container">

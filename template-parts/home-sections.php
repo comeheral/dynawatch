@@ -35,7 +35,7 @@
 
             <div class="row home-section"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
                 <div class="col-12 col-md-6 v-centered">
-                    <img style="width: 100%;" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
+                    <img class="section-image" style="width: 100%;" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                 </div>
 
                 <div class="col-12 col-md-6 v-centered">
