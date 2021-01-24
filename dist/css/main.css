@@ -28,17 +28,36 @@ ul {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.row .column {
+.row .half-col {
   width: 100%;
   padding: 0 30px;
   box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
-  .row .column {
+  .row .half-col {
     width: 50%;
+  }
+}
+
+.row .quarter-col {
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .row .quarter-col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .row .quarter-col {
+    width: 25%;
   }
 }
 
@@ -674,6 +693,80 @@ ul {
   .home-section .section-image {
     margin: 0;
   }
+}
+
+.home-section.section-background {
+  margin: 0;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .home-section.section-background {
+    flex-direction: column-reverse !important;
+  }
+}
+
+.home-section.section-background .half-col {
+  padding: 0;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .home-section.section-background .half-col {
+    height: 500px;
+  }
+}
+
+.home-section.section-background .background-content {
+  max-width: 360px;
+  padding: 30px;
+}
+
+.home-section.section-background .background-content .text {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.home-section.section-background .background-content .arrowlink {
+  color: #ffffff;
+}
+
+.home-section.section-background .background-content .arrowlink path {
+  fill: #ffffff;
+}
+
+.home-section.section-background .section-image {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .home-section.section-background .section-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.home-section.section-features .features-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home-section.section-features .features-item svg {
+  height: 70px;
+}
+
+.home-section.section-features .features-item .title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.home-section.section-features .features-item .text {
+  font-size: 16px;
+  max-width: 300px;
 }
 
 body {
