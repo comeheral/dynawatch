@@ -36,12 +36,12 @@
 
             <?php if($type === 'basic') : ?>
 
-                <div class="row-test home-section section-basic"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
-                    <div class="col-test v-centered">
+                <div class="row home-section section-basic"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
+                    <div class="column v-centered">
                         <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
 
-                    <div class="col-test v-centered">
+                    <div class="column v-centered">
                         <h2 class="title -secondary"><?php echo $title; ?></h2>
                         <p class="text"><?php echo $description ?></p>
                         <a class="arrowlink" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?><?php get_template_part('icons/gradient-arrow') ?></a>
@@ -51,11 +51,11 @@
             <?php elseif($type === 'background') : ?>
 
                 <div class="row home-section section-background"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
-                    <div class="col-12 col-md-6 v-centered">
+                    <div class="column v-centered">
                         <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
 
-                    <div class="col-12 col-md-6 v-centered">
+                    <div class="column v-centered">
                         <div class="bg"></div>
                         <h2 class="title -secondary"><?php echo $title; ?></h2>
                         <p class="text"><?php echo $description ?></p>
