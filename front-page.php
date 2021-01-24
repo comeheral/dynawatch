@@ -14,7 +14,7 @@ if( have_posts() ):
             <?php get_template_part('template-parts/home-banner'); ?>
         </div>
 
-        <div class="container">
+        <div class="container-test">
             <?php get_template_part('template-parts/home-sections'); ?>
         </div> 
 

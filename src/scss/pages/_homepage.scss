@@ -49,6 +49,7 @@
     margin-top: 140px;
 
     .section-image{
+        width: 100%;
         margin-bottom: 40px;
         @include media-breakpoint-up(md){
             margin: 0;
