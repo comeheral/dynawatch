@@ -1,7 +1,7 @@
 <?php
     $prefix = get_field("prefix-img"); // ACF champ prefixe image en fonction des produits
     
-    $upload_dir =           wp_get_upload_dir()["baseurl"] . "/" . $prefix . "-";
+    $upload_dir =           wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */;
     $idProduct =            get_the_ID();
     $product =              wc_get_product($idProduct);
     $price =                $product->price;
