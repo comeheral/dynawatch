@@ -12,7 +12,11 @@
         align-items: center;
     }
 
-    .image{width: 100%;}
+    .image{
+        width: 100%;
+        /* height: 100%;
+        object-fit: cover; */
+    }
     .price{
         margin-top: 20px;
         display: inline-block;
@@ -34,12 +38,12 @@
         .toggle{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             margin-bottom: 20px;
 
             &__title{
                 padding-bottom: 4px;
+                margin-right: 40px;
                 white-space: nowrap;
                 &.-active{
                     border-bottom: 1px solid $dark;
@@ -80,6 +84,7 @@
 
                 &.-active{
                     border: 3px solid $black;
+                    box-sizing: border-box;
                     .case-select{
                         width: 124px;
                         height: 36px;
@@ -111,6 +116,7 @@
 
                 &.-active{
                     border: 3px solid $black;
+                    box-sizing: border-box;
                     .band-select{
                         width: 36px;
                         height: 36px;
@@ -153,6 +159,7 @@
 
             &.-active{
                 border: 3px solid $black;
+                box-sizing: border-box;
                 .color-select{
                     width: 26px;
                     height: 26px;

@@ -10,10 +10,10 @@ burgerToggle.addEventListener('click', function(){
 
 
 // Burger menu
-$('.burger-toggle').click(function(){
-    $('.burger').toggleClass('-open');
-    $('.burger-toggle').toggleClass('-active');
-    $('body').toggleClass('-noscroll');
+jQuery('.burger-toggle').click(function(){
+    jQuery('.burger').toggleClass('-open');
+    jQuery('.burger-toggle').toggleClass('-active');
+    jQuery('body').toggleClass('-noscroll');
 })
 
 // Product variants
@@ -54,9 +54,9 @@ bandSize.click(function(){
     $(this).addClass('-active');
 }) */
 
-$('.variant-item').click(function(){
-    $(this).parent().find('.variant-item').removeClass('-active');
-    $(this).addClass('-active');
+jQuery('.variant-item').click(function(){
+    jQuery(this).parent().find('.variant-item').removeClass('-active');
+    jQuery(this).addClass('-active');
 })
 
 
