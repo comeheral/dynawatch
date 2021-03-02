@@ -61,7 +61,18 @@ ul {
   }
 }
 
-/* @import './foundation/grid'; */
+#product .gris {
+  background: grey !important;
+}
+
+#product .bleu {
+  background: blue !important;
+}
+
+#product .noir {
+  background: black !important;
+}
+
 .button {
   display: flex !important;
   justify-content: center !important;
@@ -786,17 +797,5 @@ body.-noscroll {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-}
-
-.gris {
-  background: grey !important;
-}
-
-.bleu {
-  background: blue !important;
-}
-
-.noir {
-  background: black !important;
 }
 /*# sourceMappingURL=main.css.map */

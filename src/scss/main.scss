@@ -8,7 +8,7 @@
 @import './foundation/variables';
 @import './foundation/mixins';
 @import './foundation/grid';
-/* @import './foundation/grid'; */
+@import './foundation/variants';
 
 //Import Elements
 @import './elements/buttons';
@@ -34,14 +34,4 @@ body{
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-}
-
-.gris{
-    background: grey !important;
-}
-
-.bleu{background: blue !important;}
-
-.noir{
-    background: black !important;
 }

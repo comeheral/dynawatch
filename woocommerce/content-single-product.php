@@ -7,15 +7,33 @@
     $price =                $product->price;
     $attributes =           $product->attributes;
     $default_attributes =   $product->default_attributes;
-    $attribute_band_color = "couleur-du-bracelet";
-    $attribute_case_color = "couleur-du-cadran";
+    $attribute_case_style = "style-du-cadran";
     $attribute_case_size =  "taille-du-cadran";
-    $case_sizes =           $attributes[$attribute_case_size]["options"];
-    $band_colors =          $attributes[$attribute_band_color]["options"];
+    $attribute_case_color = "couleur-du-cadran";
+    $attribute_band_style = "style-du-bracelet";
+    $attribute_band_size =  "taille-du-bracelet";
+    $attribute_band_color = "couleur-du-bracelet";
+    $case_styles =           $attributes[$attribute_case_style]["options"];
     $case_colors =          $attributes[$attribute_case_color]["options"];
+    $case_sizes =           $attributes[$attribute_case_size]["options"];
+    $band_styles =          $attributes[$attribute_band_style]["options"];
+    $band_colors =          $attributes[$attribute_band_color]["options"];
+    $band_sizes =          $attributes[$attribute_band_size]["options"];
 
     echo "<pre style='margin: 0;'>";
-        print_r($dial_colors);
+        print_r($case_styles);
+    echo "</pre>";
+
+    echo "<pre style='margin: 0;'>";
+        print_r($case_colors);
+    echo "</pre>";
+
+    echo "<pre style='margin: 0;'>";
+        print_r($case_sizes);
+    echo "</pre>";
+
+    echo "<pre style='margin: 0;'>";
+        print_r($band_styles);
     echo "</pre>";
 ?>
 
@@ -63,24 +81,23 @@
                 <div class="style__container">
                     <div class="style__case">
                         <h3 class="title -custom">Boitier</h3>
-                        <div class="case-item variant-item -active">
+
+                        <?php foreach($case_styles as $case_style) : ?>
+                        <div data-attribute="<?php echo $attribute_case_style; ?>" data-value="<?php echo $case_style; ?>" class="case-item variant-item <?php if ($default_attributes[$attribute_case_style] == $case_style) : ?>-active<?php endif; ?>">
                             <div class="case-select"></div>
                         </div>
-                        <div class="case-item variant-item">
-                            <div class="case-select"></div>
-                        </div>
+                        <?php endforeach; ?>
+
                     </div>
 
                     <div class="style__band">
                         <h3 class="title -custom">Bracelet</h3>
                         <div class="variants-container">
-                            <div class="band-item variant-item -active"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
-                            <div class="band-item variant-item"><div class="band-select"></div></div>
+
+                        <?php foreach($band_styles as $band_style) : ?>
+                            <div data-value="<?php echo $band_style; ?>" class="band-item variant-item <?php if ($default_attributes[$attribute_band_style] == $band_style) : ?>-active<?php endif; ?>"><div class="band-select"></div></div>
+                        <?php endforeach; ?>
+
                         </div>
                     </div>
                 </div>
@@ -172,18 +189,18 @@
                 <div class="size__case">
                     <h3 class="title -custom">Boitier</h3>
                     <div class="variants-container">
-                        <div class="size-item case-size variant-item -active"><span>40mm</span></div>
-                        <div class="size-item case-size variant-item"><span>44mm</span></div>
+                    <?php foreach($case_sizes as $case_size) : ?>
+                        <div class="size-item case-size variant-item <?php if ($default_attributes[$attribute_case_size] == $case_size) : ?>-active<?php endif; ?>"><span><?php echo $case_size ?></span></div>
+                    <?php endforeach; ?>
                     </div>
                 </div>
 
                 <div class="size__band">
                     <h3 class="title -custom">Bracelet</h3>
                     <div class="variants-container">
-                        <div class="size-item band-size variant-item -active"><span>1</span></div>
-                        <div class="size-item band-size variant-item"><span>2</span></div>
-                        <div class="size-item band-size variant-item"><span>3</span></div>
-                        <div class="size-item band-size variant-item"><span>4</span></div>
+                    <?php foreach($band_sizes as $band_size) : ?>
+                        <div class="size-item band-size variant-item <?php if ($default_attributes[$attribute_band_size] == $band_size) : ?>-active<?php endif; ?>"><span><?php echo $band_size ?></span></div>
+                    <?php endforeach; ?>
                     </div>
                 </div>
 

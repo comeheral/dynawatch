@@ -18,19 +18,19 @@ jQuery('.burger-toggle').click(function(){
 
 // Product variants
 /* const caseStyle = $('#product .style .case-item');
-const bandStyle = $('#product .style .band-item');
+const strapStyle = $('#product .style .strap-item');
 const caseColor = $('#product .color .case-item');
-const bandColor = $('#product .color .band-item');
+const strapColor = $('#product .color .strap-item');
 const caseSize = $('#product .size .case-size');
-const bandSize = $('#product .size .band-size');
+const strapSize = $('#product .size .strap-size');
 
 caseStyle.click(function(){
     caseStyle.removeClass('-active');
     $(this).addClass('-active');
 })
 
-bandStyle.click(function(){
-    bandStyle.removeClass('-active');
+strapStyle.click(function(){
+    strapStyle.removeClass('-active');
     $(this).addClass('-active');
 })
 
@@ -39,8 +39,8 @@ caseColor.click(function(){
     $(this).addClass('-active');
 })
 
-bandColor.click(function(){
-    bandColor.removeClass('-active');
+strapColor.click(function(){
+    strapColor.removeClass('-active');
     $(this).addClass('-active');
 })
 
@@ -49,8 +49,8 @@ caseSize.click(function(){
     $(this).addClass('-active');
 })
 
-bandSize.click(function(){
-    bandSize.removeClass('-active');
+strapSize.click(function(){
+    strapSize.removeClass('-active');
     $(this).addClass('-active');
 }) */
 
