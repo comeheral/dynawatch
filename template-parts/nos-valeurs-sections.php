@@ -11,8 +11,13 @@
             $title = get_sub_field('nos_valeurs_sections_title');
             $text = get_sub_field('nos_valeurs_sections_text');
             $image = get_sub_field('nos_valeurs_sections_images');
-            $quote = get_sub_field('nos_valeurs_sections_quotes');
             $type = get_sub_field('nos_valeurs_sections_type');
+            $quoteText = get_sub_field('nos_valeurs_sections_quote_text');
+            $quoteImgG = get_sub_field('nos_valeurs_sections_quote_img_g');
+            $quoteImgD = get_sub_field('nos_valeurs_sections_quote_img_d');
+
+
+
             // Do something...
 
             /* echo '<p>';
@@ -51,14 +56,18 @@
             <?php elseif($type === 'quotes') : ?>
 
                 <div class="row nos-valeurs-section section-quotes">
-                    <div class="half-col v-centered">
-                        <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
+                    <div class="">
+                        <img class="section-image" src="<?php echo $quoteImgG['sizes']['large'] ?>" alt="<?php echo $quoteImgG['alt'] ?>">
                     </div>
 
-                    <div class="half-col v-centered">
+                    <div class="">
                         <div class="background-content">
-                            <p class="text"><?php echo $description ?></p>
+                            <p class="text"><?php echo $quoteText ?></p>
                         </div>
+                    </div>
+
+                    <div class="">
+                        <img class="section-image" src="<?php echo $quoteImgD['sizes']['large'] ?>" alt="<?php echo $quoteImgD['alt'] ?>">
                     </div>
                 </div>
 
