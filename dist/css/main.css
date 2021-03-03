@@ -73,6 +73,14 @@ ul {
   background: black !important;
 }
 
+#product .aluminium {
+  background: linear-gradient(180deg, #EBEAEA 0%, #CBCBCB 100%) !important;
+}
+
+#product .acier {
+  background: linear-gradient(180deg, #E8E8E8 0%, #EDEDED 37.5%, #D5D5D5 37.51%, #EAEAEA 100%) !important;
+}
+
 .button {
   display: flex !important;
   justify-content: center !important;

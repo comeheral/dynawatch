@@ -83,9 +83,13 @@
                         <h3 class="title -custom">Boitier</h3>
 
                         <?php foreach($case_styles as $case_style) : ?>
-                        <div data-attribute="<?php echo $attribute_case_style; ?>" data-value="<?php echo $case_style; ?>" class="case-item variant-item <?php if ($default_attributes[$attribute_case_style] == $case_style) : ?>-active<?php endif; ?>">
-                            <div class="case-select"></div>
-                        </div>
+                            <?php
+                                $isActive = ($default_attributes[$attribute_case_style] == $case_style) ? "-active" : "";
+                                $className = strtolower($case_style);
+                            ?>
+                            <div class="case-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_case_style; ?>" data-value="<?php echo $case_style; ?>">
+                                <div class="case-select <?php echo $className ?>"></div>
+                            </div>
                         <?php endforeach; ?>
 
                     </div>
@@ -95,7 +99,13 @@
                         <div class="variants-container">
 
                         <?php foreach($band_styles as $band_style) : ?>
-                            <div data-value="<?php echo $band_style; ?>" class="band-item variant-item <?php if ($default_attributes[$attribute_band_style] == $band_style) : ?>-active<?php endif; ?>"><div class="band-select"></div></div>
+                            <?php
+                                $isActive = ($default_attributes[$attribute_band_style] == $band_style) ? "-active" : "";
+                                $className = strtolower($band_style);
+                            ?>
+                            <div class="band-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_band_style; ?>" data-value="<?php echo $band_style; ?>">
+                                <div class="band-select"></div>
+                            </div>
                         <?php endforeach; ?>
 
                         </div>
@@ -126,7 +136,7 @@
     </div>
 
 
-    <div class="color product-step" style="display: none;">
+    <div class="color product-step">
         <div class="row">
             <div class="half-col">
                 <img class="image" data-src="<?php echo($upload_dir); ?>/watch-{color}.jpg" src="<?php echo($upload_dir); ?>/colors.jpg" alt="Couleurs">
@@ -143,10 +153,12 @@
 
                     <?php foreach($case_colors as $case_color) : ?>
                         <?php
-                            $isActive = ($default_attributes["couleur-du-cadran"] == $case_color) ? "-active" : "";
-                            $classname = strtolower($case_color);
+                            $isActive = ($default_attributes[$attribute_case_color] == $case_color) ? "-active" : "";
+                            $className = strtolower($case_color);
                         ?>
-                        <div class="color-item case-item <?php echo $isActive ?> variant-item" data-value="<?php echo $case_color ?>"><div class="color-select <?php echo $classname ?>"></div></div>
+                        <div class="color-item case-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_case_color ?>" data-value="<?php echo $case_color ?>">
+                            <div class="color-select <?php echo $className ?>"></div>
+                        </div>
                     <?php endforeach; ?>
 
                     </div>
@@ -156,10 +168,17 @@
                 <div class="color__band">
                     <h3 class="title -custom">Bracelet</h3>
                     <div class="variants-container">
-                        <div class="color-item band-item variant-item -active"><div class="color-select"></div></div>
-                        <div class="color-item band-item variant-item"><div class="color-select"></div></div>
-                        <div class="color-item band-item variant-item"><div class="color-select"></div></div>
-                        <div class="color-item band-item variant-item"><div class="color-select"></div></div>
+
+                    <?php foreach($band_colors as $band_color) : ?>
+                        <?php
+                            $isActive = ($default_attributes[$attribute_band_color] == $band_color) ? "-active" : "";
+                            $className = strtolower($band_color);
+                        ?>
+                        <div class="color-item band-item variant-item <?php echo $isActive ?>" data-attribute="<?php echo $attribute_band_color ?>" data-value="<?php echo $band_color ?>">
+                            <div class="color-select <?php echo $className ?>"></div>
+                        </div>
+                    <?php endforeach; ?>
+
                     </div>
                     
                 </div>
@@ -176,7 +195,7 @@
     </div>
 
 
-    <div class="size product-step" style="display: none;">
+    <div class="size product-step">
         <div class="row">
             <div class="half-col">
                 <img class="image" src="<?php echo($upload_dir); ?>/colors.jpg" alt="taille">
@@ -190,7 +209,10 @@
                     <h3 class="title -custom">Boitier</h3>
                     <div class="variants-container">
                     <?php foreach($case_sizes as $case_size) : ?>
-                        <div class="size-item case-size variant-item <?php if ($default_attributes[$attribute_case_size] == $case_size) : ?>-active<?php endif; ?>"><span><?php echo $case_size ?></span></div>
+                        <?php
+                            $isActive = ($default_attributes[$attribute_case_size] == $case_size) ? "-active" : "";
+                        ?>
+                        <div class="size-item case-size variant-item <?php echo $isActive ?>"><span><?php echo $case_size ?></span></div>
                     <?php endforeach; ?>
                     </div>
                 </div>
@@ -199,7 +221,10 @@
                     <h3 class="title -custom">Bracelet</h3>
                     <div class="variants-container">
                     <?php foreach($band_sizes as $band_size) : ?>
-                        <div class="size-item band-size variant-item <?php if ($default_attributes[$attribute_band_size] == $band_size) : ?>-active<?php endif; ?>"><span><?php echo $band_size ?></span></div>
+                        <?php
+                            $isActive = ($default_attributes[$attribute_band_size] == $band_size) ? "-active" : "";
+                        ?>
+                        <div class="size-item band-size variant-item <?php echo $isActive ?>"><span><?php echo $band_size ?></span></div>
                     <?php endforeach; ?>
                     </div>
                 </div>
