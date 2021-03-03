@@ -126,7 +126,7 @@
     </div>
 
 
-    <div class="color product-step">
+    <div class="color product-step" style="display: none;">
         <div class="row">
             <div class="half-col">
                 <img class="image" data-src="<?php echo($upload_dir); ?>/watch-{color}.jpg" src="<?php echo($upload_dir); ?>/colors.jpg" alt="Couleurs">
@@ -176,7 +176,7 @@
     </div>
 
 
-    <div class="size product-step">
+    <div class="size product-step" style="display: none;">
         <div class="row">
             <div class="half-col">
                 <img class="image" src="<?php echo($upload_dir); ?>/colors.jpg" alt="taille">
