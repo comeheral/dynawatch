@@ -33,6 +33,16 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    &.-orange{
+        color : $orange;
+        font-size : 30px;
+    }
+
+    &.-black{
+        font-size : 64px;
+        font-weight : bold;
+    }
 }
 
 .text{

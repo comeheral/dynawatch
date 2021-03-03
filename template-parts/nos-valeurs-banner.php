@@ -18,9 +18,9 @@
 ?>
 
 <h1 class="banner-title title -primary"><?php echo $title ?></h1>
-<h2 class="banner-mini-subtitle  title -tertiary"><?php echo $minisubtitle ?></h2>
-<h3 class="banner-subtitle"><?php echo $subtitle ?></h3>
-<p class="description"><?php echo $description ?></p>
+<h2 class="banner-mini-subtitle  title -orange"><?php echo $minisubtitle ?></h2>
+<h3 class="banner-subtitle title -black"><?php echo $subtitle ?></h3>
+<p class="description text"><?php echo $description ?></p>
 <img class="banner-image" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
 
 
