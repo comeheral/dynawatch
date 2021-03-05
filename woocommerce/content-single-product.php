@@ -20,21 +20,9 @@
     $band_colors =          $attributes[$attribute_band_color]["options"];
     $band_sizes =          $attributes[$attribute_band_size]["options"];
 
-    echo "<pre style='margin: 0;'>";
+    /* echo "<pre style='margin: 0;'>";
         print_r($case_styles);
-    echo "</pre>";
-
-    echo "<pre style='margin: 0;'>";
-        print_r($case_colors);
-    echo "</pre>";
-
-    echo "<pre style='margin: 0;'>";
-        print_r($case_sizes);
-    echo "</pre>";
-
-    echo "<pre style='margin: 0;'>";
-        print_r($band_styles);
-    echo "</pre>";
+    echo "</pre>"; */
 ?>
 
 <main id="product">
@@ -104,7 +92,7 @@
                                 $className = strtolower($band_style);
                             ?>
                             <div class="band-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_band_style; ?>" data-value="<?php echo $band_style; ?>">
-                                <div class="band-select <?php echo $className ?>" style="background: url('<?php echo($upload_dir); ?>/<?php echo $className ?>-variant.jpg');"></div>
+                                <div class="band-select <?php echo $className ?>" style="background: center url('<?php echo($upload_dir); ?>/<?php echo $className ?>-variant.jpg');"></div>
                             </div>
                         <?php endforeach; ?>
 
@@ -112,57 +100,32 @@
                     </div>
                 </div>
 
-                <div class="case-desc aluminium">
-                    <h3 class="title -custom">Boîtier aluminium</h3>
-                    <p class="text -small">Extrêmement léger, le boîtier en aluminium est constitué d’un alliage de qualité aérospatiale 100% 
-                        recyclé.</p>
-                </div>
-                <div class="case-desc acier">
-                    <h3 class="title -custom">Boîtier acier</h3>
-                    <p class="text -small">Très résistant, le boîtier en acier inoxydable est poli avec soin pour un fini étincelant.</p>
+                <?php
+                // Check rows exists.
+                if( have_rows('product_style') ):
+
+                    // Loop through rows.
+                    while( have_rows('product_style') ) : the_row();
+
+                        // Load sub field value.
+                        $item = get_sub_field('product_style_item');
+                        $handle = get_sub_field('product_style_handle');
+                        $name = get_sub_field('product_style_name');
+                        $description = get_sub_field('product_style_description');
+
+                        if($item == "case") : $className = "case-desc"; elseif($item == "band") : $className = "band-desc"; endif;
+
+                ?>
+
+                <div class="<?php echo $className ?> <?php echo $handle ?>">
+                    <h3 class="title -custom"><?php echo $name ?></h3>
+                    <p class="text -small"><?php echo $description ?></p>
                 </div>
 
-                <div class="band-desc boucle-unique-tressee">
-                    <h3 class="title -custom">Bracelet boucle unique tressée</h3>
-                    <p class="text -small">Le bracelet Boucle unique tressée est constitué de filaments recyclés entrecroisés avec des fils de 
-                        silicone pour un design extensible offrant un maximum de confort, sans fermoir ni attache.</p>
-                </div>
-
-                <div class="band-desc boucle-unique">
-                    <h3 class="title -custom">Bracelet boucle unique</h3>
-                    <p class="text -small">Constitué d’un silicone extensible et doux, le bracelet Boucle unique est conçu pour offrir un maximum 
-                        de confort, sans fermoir ni attache.</p>
-                </div>
-
-                <div class="band-desc sport">
-                    <h3 class="title -custom">Bracelet sport</h3>
-                    <p class="text -small">Composé d’un fluoroélastomère de haute qualité à la fois résistant et étonnamment doux, le Bracelet Sport 
-                        est doté d’un système innovant de fermeture à clou et passant.</p>
-                </div>
-
-                <div class="band-desc boucle-sport">
-                    <h3 class="title -custom">Bracelet boucle sport</h3>
-                    <p class="text -small">La Boucle Sport est constituée d’un nylon tissé double épaisseur doux et respirant, avec un système de rabat 
-                        à scratch qui s’ajuste facilement.</p>
-                </div>
-
-                <div class="band-desc maillons-cuir">
-                    <h3 class="title -custom">Bracelet à maillons cuir</h3>
-                    <p class="text -small">Constitué de cuir Roux Granada travaillé à la main, le Bracelet à maillons cuir, sans boucle ni fermoir, se 
-                        fixe à l’aide d’aimants intégrés pour un maintien sûr et ajustable.</p>
-                </div>
-
-                <div class="band-desc boucle-moderne">
-                    <h3 class="title -custom">Bracelet boucle moderne</h3>
-                    <p class="text -small">Le bracelet Boucle moderne est constitué de cuir Granada souple renforcé par une couche intérieure 
-                        indéformable. Il est doté d’un fermoir magnétique en deux parties qui s’attache très facilement.</p>
-                </div>
-
-                <div class="band-desc milanais">
-                    <h3 class="title -custom">Bracelet Milanais</h3>
-                    <p class="text -small">Le Bracelet Milanais est constitué de mailles en acier inoxydable douces au toucher. Et comme il est entièrement 
-                        magnétique, il est ajustable à l’infini, pour assurer un maintien parfait.</p>
-                </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
                 
                 <span class="price">À partir de <strong>429€</strong></span>
 
