@@ -1,16 +1,37 @@
 #product{
+    opacity: 0;
+    transition: opacity .2s;
 
     .variants-container{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     .product-step{
+        position: relative;
         min-height: calc(100vh - 60px);
         padding: 20px 0;
         display: flex;
         align-items: center;
+        position: absolute;
+        width: 100vw;
+        transition: transform .4s;
+
+        &.-activeStep{
+            transform: translateX(0);
+        }
+
+        &.-beforeStep{
+            transform: translateX(-100%);
+        }
+
+        &.-afterStep{
+            transform: translateX(100%);
+        }
     }
+
+    .half-col{position: relative;}
 
     .image{
         width: 100%;
@@ -26,7 +47,16 @@
     .arrowlink, .button{
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    .js-prev-step{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 20px;
+        cursor: pointer;
     }
 
 

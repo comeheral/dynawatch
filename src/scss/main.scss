@@ -23,8 +23,12 @@
 @import './pages/product';
 @import './pages/homepage';
 
+html{
+    overflow-x: hidden;
+}
+
 body{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     &.-noscroll{
         overflow: hidden;
     }
@@ -34,4 +38,9 @@ body{
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+}
+
+// Hide default Woocommerce product form
+.single-product .summary{
+    display: none;
 }

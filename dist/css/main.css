@@ -480,6 +480,11 @@ ul {
   transform: translateX(7px);
 }
 
+#product {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
 #product .variants-container {
   display: flex;
   flex-direction: row;
@@ -487,10 +492,30 @@ ul {
 }
 
 #product .product-step {
+  position: relative;
   min-height: calc(100vh - 60px);
   padding: 20px 0;
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  transition: transform .4s;
+}
+
+#product .product-step.-activeStep {
+  transform: translateX(0);
+}
+
+#product .product-step.-beforeStep {
+  transform: translateX(-100%);
+}
+
+#product .product-step.-afterStep {
+  transform: translateX(100%);
+}
+
+#product .half-col {
+  position: relative;
 }
 
 #product .image {
@@ -511,7 +536,16 @@ ul {
 #product .arrowlink, #product .button {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 40px;
+  cursor: pointer;
+}
+
+#product .js-prev-step {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 #product .edition__title {
@@ -833,8 +867,12 @@ ul {
   max-width: 300px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 body.-noscroll {
@@ -845,5 +883,9 @@ body.-noscroll {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+}
+
+.single-product .summary {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
