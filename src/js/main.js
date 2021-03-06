@@ -3,7 +3,10 @@ jQuery(document).ready(function(){
     window.location.hash = '';
     jQuery('html').scrollLeft(0);
     jQuery('#product').css('opacity', 1);
-    window.location.hash = 'step-1';
+
+    if(window.location.href.indexOf('/produit/') > 0){ // url #step-1 si page produit
+        window.location.hash = 'step-1'; 
+    }
 })
 
 // Burger menu
@@ -28,14 +31,27 @@ jQuery('.variant-item').click(function(){
     if (jQuery(this).hasClass('case-item')){ // Si sélection du style du boitier
         jQuery('.case-desc').hide();
         let caseValue = jQuery(this).data('value');
-        jQuery('.case-desc.'+caseValue).show();
+        jQuery('.case-desc.'+ caseValue).show();
+
+        // Changement de l'image
+        let $image = jQuery('.case-image');
+        let src = $image.data('source');
+        src = src.replace('{value}', caseValue);
+        $image.attr('src', src);
+
 
     }else if (jQuery(this).hasClass('band-item')){ // Si sélection du style du bracelet
         jQuery('.band-desc').hide();
         let bandValue = jQuery(this).data('value');
-        jQuery('.band-desc.'+bandValue).show();
+        jQuery('.band-desc.'+ bandValue).show();
 
+        // Changement de l'image
+        let $image = jQuery('.band-image');
+        let src = $image.data('source');
+        src = src.replace('{value}', bandValue);
+        $image.attr('src', src);
     }
+
 
     let attribute = jQuery(this).data('attribute');
     let value = jQuery(this).data('value');
@@ -81,3 +97,38 @@ jQuery('.js-prev-step').click(function(e){
 /* window.onhashchange = function() {
     //blah blah blah
 } */
+
+// CACHER LES VARIANTES QUI N'EXISTENT PAS
+jQuery('.variations_form').on("woocommerce_update_variation_values", function(){
+    console.log('refresh form')
+
+    let $form = jQuery(this);
+
+    // Styles du boîtier
+    let $caseStyle = jQuery('.style .case-item');
+    $caseStyle.show();
+    $caseStyle.each(function(){
+        let attribute = jQuery(this).data('attribute');
+        let value = jQuery(this).data('value');
+
+        let selectValue = $form.find('select#' + attribute).find('option[value="'+ value +'"]');
+
+        if (!selectValue.length > 0){
+            jQuery(this).hide();
+        }
+    })
+
+    // Styles du bracelet
+    let $bandStyle = jQuery('.style .band-item');
+    $bandStyle.show();
+    $bandStyle.each(function(){
+        let attribute = jQuery(this).data('attribute');
+        let value = jQuery(this).data('value');
+
+        let selectValue = $form.find('select#' + attribute).find('option[value="'+ value +'"]');
+
+        if (!selectValue.length > 0){
+            jQuery(this).hide();
+        }
+    })
+});

@@ -20,8 +20,12 @@
     $band_colors =          $attributes[$attribute_band_color]["options"];
     $band_sizes =          $attributes[$attribute_band_size]["options"];
 
-    /* echo "<pre style='margin: 0;'>";
-        print_r($case_styles);
+    $available = $product->get_available_variations();
+    $variation = $product->get_variation_attributes();
+    $product_name = $product->get_attribute( 'style-du-bracelet' );
+
+    /* echo "<pre style='margin-top: 100px;'>";
+        print_r($available);
     echo "</pre>"; */
 ?>
 
@@ -29,7 +33,7 @@
     <div class="edition product-step step-1 -activeStep" data-step="1">
             <div class="row">
                 <div class="half-col">
-                    <img class="image" src="<?php echo($upload_dir); ?>/hermes.jpg" alt="Édition">
+                    <img class="image" src="<?php echo($upload_dir); ?>hermes.jpg" alt="Édition">
                 </div>
 
                 <div class="half-col">
@@ -59,7 +63,10 @@
     <div class="style product-step step-2 -afterStep" data-step="2">
         <div class="row">
             <div class="half-col">
-                <img class="image" src="<?php echo($upload_dir); ?>/style.jpg" alt="Style">
+                <div class="image-wrapper">
+                    <img class="image case-image -absolute" data-source="<?php echo($upload_dir); ?>case-style-{value}.png" src="<?php echo($upload_dir); ?>case-style-<?php echo $default_attributes[$attribute_case_style] ?>.png" alt="Style">
+                    <img class="image band-image" data-source="<?php echo($upload_dir); ?>band-style-{value}.png" src="<?php echo($upload_dir); ?>band-style-<?php echo $default_attributes[$attribute_band_style] ?>.png" alt="Style">
+                </div>
             </div>
 
             <div class="half-col">
