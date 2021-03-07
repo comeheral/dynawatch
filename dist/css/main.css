@@ -1268,6 +1268,7 @@ ul {
   }
 }
 
+<<<<<<< develop
 .error404-container .footer {
   margin: 0;
 }
@@ -1445,6 +1446,21 @@ html {
   html.-productNoscroll {
     overflow-y: hidden;
   }
+=======
+.description-banner {
+  background-color: black;
+  text-align: center;
+  padding-bottom: 30px;
+  height: 100vh;
+}
+
+.description-banner .banner-title {
+  padding-top: 200px;
+}
+
+.description-banner .description-banner-image {
+  margin: 0 auto;
+>>>>>>> Création page Description
 }
 
 body {
