@@ -259,6 +259,14 @@ ul {
   background: linear-gradient(94.33deg, #FFC46B 0%, #FF7D78 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin: 0 30px;
+}
+
+@media (min-width: 768px) {
+  .title.-gradient {
+    font-size: 48px;
+  }
 }
 
 .title.-orange {
@@ -287,6 +295,16 @@ ul {
 @media (min-width: 768px) {
   .title.-quote {
     font-size: 64px;
+  }
+}
+
+.title.subtitle-white {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .title.subtitle-white {
+    font-size: 36px;
   }
 }
 
@@ -1450,8 +1468,9 @@ html {
 .description-banner {
   background-color: black;
   text-align: center;
-  padding-bottom: 30px;
-  height: 100vh;
+  padding-bottom: 150px;
+  position: relative;
+  margin-bottom: -80px;
 }
 
 .description-banner .banner-title {
@@ -1459,8 +1478,110 @@ html {
 }
 
 .description-banner .description-banner-image {
+  position: absolute;
+  z-index: -1;
   margin: 0 auto;
+<<<<<<< develop
 >>>>>>> Création page Description
+=======
+  left: 0;
+  top: 0;
+}
+
+.description-banner .description-text {
+  padding: 30px 0 50px;
+}
+
+.description-banner .text {
+  text-align: center;
+  margin: 0 30px;
+}
+
+.description-banner .text-arrow {
+  padding-right: 8px;
+}
+
+.description-banner .arrowlink {
+  margin: 0 auto !important;
+}
+
+.section-banner {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.section-banner .section-image-background {
+  position: absolute;
+  z-index: -1;
+  top: -35px;
+}
+
+.section-banner .banner-title {
+  font-size: 30px;
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-banner .banner-title {
+    font-size: 70px;
+  }
+}
+
+.section-banner .banner-subtitle {
+  font-size: 20px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-banner .banner-subtitle {
+    font-size: 40px;
+  }
+}
+
+.section-image-background {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.section-txtImage {
+  margin-bottom: -50px;
+}
+
+.section-txtImage .section-images {
+  margin: 20px 5vw 0 5vw !important;
+  text-align: center;
+}
+
+.section-txtImage .section-images .image1 {
+  width: 40vw;
+}
+
+.section-txtImage .text {
+  margin: 0 30px !important;
+}
+
+.section-basic {
+  margin: 120px 0 50px;
+}
+
+.section-background {
+  padding-top: 30px;
+  margin-bottom: -30px;
+  position: relative;
+  height: 550px;
+}
+
+.section-background .section-image {
+  position: absolute;
+  width: 80vw;
+  top: 320px;
+}
+
+.section-background2 {
+  background-color: #000000;
+>>>>>>> Création contenu HTML + CSS mobile
 }
 
 body {

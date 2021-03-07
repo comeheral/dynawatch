@@ -1,14 +1,109 @@
 .description-banner{
     background-color : black;
     text-align : center;
-    padding-bottom : 30px;
-    height : 100vh;
+    padding-bottom : 150px;
+    position : relative;
+    margin-bottom: -80px;;
 
     .banner-title{
         padding-top : 200px;
         }
 
     .description-banner-image{
+        position : absolute;
+        z-index: -1;
         margin : 0 auto;
+        left : 0;
+        top : 0;
     }
+
+    .description-text{
+        padding : 30px 0 50px;
+    }
+
+    .text{
+        text-align : center;
+        margin : 0 30px;
+    }
+
+    .text-arrow{
+        padding-right : 8px;
+    }
+
+    .arrowlink{
+        margin : 0 auto !important;
+    }
+}
+
+//SECTIONS BANNER
+.section-banner{
+    position : relative;
+    margin-bottom : 100px;
+    .section-image-background{
+        position : absolute;
+        z-index : -1;
+        top : -35px;
+    }
+
+    .banner-title{
+        font-size : 30px;
+        margin : 70px auto 0;
+        text-align : center;
+        @include media-breakpoint-up(md){
+            font-size : 70px;
+            }
+        }
+
+    .banner-subtitle{
+        font-size : 20px;
+        margin : 0 auto 30px;
+        text-align : center;
+        @include media-breakpoint-up(md){
+            font-size : 40px;
+           }
+        }
+}
+
+.section-image-background{
+    width : 100vw;
+    margin : 0 auto;
+}
+
+//SECTION 2 IMAGES SUR UNE SEULE LIGNE / JUSTE EN DESSOUS DE OXYGENE DANS LE SANG
+.section-txtImage{
+    margin-bottom : -50px;
+    .section-images{
+        margin : 20px 5vw 0 5vw !important;
+        text-align : center;
+        .image1{
+            width : 40vw;            
+        }
+    }
+
+    .text{
+        margin : 0 30px !important;
+    }
+}
+
+//SECTION BASIQUE
+.section-basic{
+    margin : 120px 0 50px;
+}
+
+//SECTION BACKGROUND
+.section-background{
+    padding-top : 30px;
+    margin-bottom : -30px;
+    position : relative;
+    height : 550px;
+    .section-image{
+        position : absolute;
+        width : 80vw;
+        top : 320px;
+    }
+}
+
+//SECTION BACKGROUND COLOR 
+.section-background2{
+    background-color : $black;
 }

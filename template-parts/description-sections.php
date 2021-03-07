@@ -13,81 +13,88 @@
             $image = get_sub_field('description_section_image');
             $type = get_sub_field('description_section_type');
             $order = get_sub_field('description_section_order');
-            $backgroundcolor = get_sub_field('description_section_background_color');
-            // Do something...
-
-            /* echo '<p>';
-            echo $title;
-            echo '</p>';
-
-            echo '<p>';
-            echo $description;
-            echo '</p>'; */
-
-            /* echo '<pre>';
-            print_r($order);
-            echo '</pre>'; */
-
-            /* echo '<pre>';
-            print_r($link);
-            echo '</pre>'; */
+            $backgroundimage = get_sub_field('description_section_background_image');
+            $color = get_sub_field('description_section_background_color');
+            $color2 = get_sub_field('description_section_background_color2');
+            $image2 = get_sub_field('description_section_image_2');
+            $button = get_sub_field('description_section_button');
+            
 
             ?>
 
-            <?php if($type === 'basic') : ?>
 
+            <?php if($type === 'basic') : ?>
                 <div class="row description-section section-basic"  <?php if($order === 'right') : ?>style="flex-direction: row-reverse"<?php endif; ?>>
                     <div class="half-col v-centered">
                         <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
 
                     <div class="half-col v-centered">
-                        <h2 class="title -secondary"><?php echo $title; ?></h2>
-                        <p class="text"><?php echo $description ?></p>
-                        <a class="arrowlink" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?><?php get_template_part('icons/gradient-arrow') ?></a>
+                        <h1 class="title -secondary"><?php echo $title ?></h1>
+                        <h2 class="title -secondary -orange"><?php echo $subtitle ?></h2>
+                        <p class="text"><?php echo $text ?></p>
                     </div>
                 </div>
 
-            <?php elseif($type === 'background') : ?>
 
-            <div class="section-background" style="background-color: <?php echo $color ?>"
-                <div class=" row description-section" <?php if($order === 'right') : ?>flex-direction: row-reverse<?php endif; ?>">
+            <?php elseif($type === 'backgroundcolor') : ?>
+
+            <div class="section-background" style="background-color: <?php echo $color ?>">
+                <div class="row description-section">
+
+                    <div class="half-col v-centered">
+                        <div class="background-content">
+                            <h1 class="title -secondary -white"><?php echo $title ?></h1>
+                            <h2 class="title -secondary -white"><?php echo $subtitle ?></h2>
+                            <p class="text -white"><?php echo $text?></p>
+                        </div>
+                    </div>
+
                     <div class="half-col v-centered">
                         <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
 
-                    <div class="half-col v-centered">
-                        <div class="background-content">
-                            <p class="text"><?php echo $description ?></p>
-                            <a class="arrowlink" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?><?php get_template_part('icons/gradient-arrow') ?></a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <?php elseif($type === 'features') : ?>
 
+            <?php elseif($type === 'backgroundcolor2') : ?>
+
+            <div class="section-background2" style="background-color: <?php echo $color2 ?>">
                 <div class="row description-section">
-                    <?php
-                    if( have_rows('home_sections_features') ):
-                        while( have_rows('home_sections_features') ) : the_row();
-                        
-                        $features_title = get_sub_field('home_sections_features_title');
-                        $features_text = get_sub_field('home_sections_features_text');
-                        $features_icon = get_sub_field('home_sections_features_icon');
-                    ?>
-                    
-                    <div class="quarter-col features-item">
-                        <?php echo $features_icon ?>
-                        <h3 class="title -gradient"><?php echo $features_title ?></h3>
-                        <p class="text"><?php echo $features_text ?></p>
-                    </div>
 
-                    <?php
-                        endwhile;
-                    endif;
-                    ?>
-                
+                <div class="background-content">
+                    <h1 class="title -secondary -white"><?php echo $title ?></h1>
+                    <h2 class="title -white"><?php echo $subtitle ?></h2>
+                    <a class="button burger__button -gradient" href="<?php echo $button['url'] ?>">
+                        <?php echo $button['title'] ?>
+                    </a>
+                </div>
+
+                </div>
+            </div>
+
+            <?php elseif($type === 'banner') : ?>
+
+                <div class="section-banner">
+                    <h1 class="banner-title title -primary -white"><?php echo $title ?></h2>
+                    <h2 class="banner-subtitle title -secondary -white"><?php echo $subtitle ?></h2>
+
+                    <img class="section-image-background" src="<?php echo $backgroundimage['sizes']['large'] ?>" alt="<?php echo $backgroundimage['alt'] ?>">
+    
+
+                </div>
+
+
+            <?php elseif($type === 'txtImage') : ?>
+
+                <div class="section-txtImage">
+                    <p class="text"><?php echo $text ?></p>
+
+                    <div class="section-images">
+                        <img class="image1" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
+                        <img class="image1" src="<?php echo $image2['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
+                    </div>
                 </div>
 
             <?php endif ; ?>
