@@ -485,6 +485,53 @@ ul {
   overflow: hidden;
   opacity: 0;
   transition: opacity .2s;
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  #product {
+    padding: 0;
+  }
+}
+
+#product .-mobile {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  #product .-mobile {
+    display: none !important;
+  }
+}
+
+#product .-mobileFlex {
+  display: flex !important;
+}
+
+@media (min-width: 768px) {
+  #product .-mobileFlex {
+    display: none !important;
+  }
+}
+
+#product .-desktop {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  #product .-desktop {
+    display: block !important;
+  }
+}
+
+#product .-desktopFlex {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  #product .-desktopFlex {
+    display: flex !important;
+  }
 }
 
 #product .variants-container {
@@ -520,6 +567,10 @@ ul {
   position: relative;
 }
 
+#product .title.-mobile {
+  margin-bottom: 30px;
+}
+
 #product .image-wrapper {
   position: relative;
   width: 100%;
@@ -527,6 +578,13 @@ ul {
 
 #product .image {
   width: 100%;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  #product .image {
+    margin: 0;
+  }
 }
 
 #product .image.-absolute {
@@ -544,11 +602,18 @@ ul {
   line-height: 26px;
 }
 
-#product .arrowlink, #product .button {
+#product .arrowlink, #product .button.add-to-cart-bt {
   position: absolute;
   bottom: 0;
   right: 40px;
   cursor: pointer;
+}
+
+#product .button.next-bt {
+  width: auto !important;
+  border-radius: 10px !important;
+  margin: 60px 0 10px 0 !important;
+  font-size: 20px !important;
 }
 
 #product .js-prev-step {
@@ -568,12 +633,24 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  #product .edition .toggle {
+    flex-direction: row;
+  }
 }
 
 #product .edition .toggle__title {
   padding-bottom: 4px;
-  margin-right: 40px;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  #product .edition .toggle__title {
+    margin-right: 40px;
+  }
 }
 
 #product .edition .toggle__title.-active {
@@ -902,7 +979,9 @@ body.-noscroll {
     z-index: 99; */
 }
 
-.nav {
-  top: 32px;
+#wpadminbar {
+  display: none;
 }
+
+/* .nav{top: 32px;} */
 /*# sourceMappingURL=main.css.map */

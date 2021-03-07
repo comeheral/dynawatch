@@ -1,12 +1,20 @@
+// Mettre taille du conteneur à la taille de l'étape
+function calculateHeight(){
+    let stepHeight = jQuery('#product .-activeStep').outerHeight();
+    jQuery('#product').height(stepHeight);
+}
+
 // Reload
 jQuery(document).ready(function(){
-    /* window.location.hash = ''; */
     jQuery('html').scrollLeft(0);
     jQuery('#product').css('opacity', 1);
 
-    /* if(window.location.href.indexOf('/produit/') > 0){ // url #step-1 si page produit
-        window.location.hash = 'step-1'; 
-    } */
+    calculateHeight();
+})
+
+// On resize
+jQuery(window).resize(function(){
+    calculateHeight();
 })
 
 let url = window.location.href;
@@ -26,15 +34,6 @@ let activeCaseValue = jQuery('.case-item.-active').data('value');
 let activeBandValue = jQuery('.band-item.-active').data('value');
 jQuery('.case-desc.'+activeCaseValue).show();
 jQuery('.band-desc.'+activeBandValue).show();
-
-// Mettre taille du conteneur à la taille de l'étape
-function calculateHeight(){
-    let stepHeight = jQuery('#product .-activeStep').outerHeight();
-    jQuery('#product').height(stepHeight);
-}
-
-calculateHeight();
-
 
 
 // Clic sur variante
@@ -98,7 +97,7 @@ jQuery('.variant-item').click(function(){
 jQuery('.js-add-to-cart').click(function(e){
     e.preventDefault();
     jQuery('.variations_form').submit();
-    window.location.href = "/panier";
+    /* window.location.href = url + '/panier'; */
 })
 
 
@@ -113,7 +112,7 @@ jQuery('.js-next-step').click(function(e){
 
     jQuery(this).closest('.product-step').removeClass('-activeStep').addClass('-beforeStep'); // Set active step to previous step
     jQuery('.step-' + nextValue).removeClass('-afterStep').addClass('-activeStep'); // Set next step to active step
-    /* window.location.hash = 'step-' + nextValue; */
+
     window.history.pushState('', '', url);
 
     calculateHeight();
@@ -136,15 +135,10 @@ jQuery('.js-prev-step').click(function(e){
 
     jQuery(this).closest('.product-step').removeClass('-activeStep').addClass('-afterStep'); // Set active step to next step
     jQuery('.step-' + prevValue).removeClass('-beforeStep').addClass('-activeStep'); // Set previous step to active step
-    /* window.location.hash = 'step-' + prevValue; */
     window.history.pushState('', '', url);
 
     calculateHeight();
 })
-
-/* window.onhashchange = function() {
-    //blah blah blah
-} */
 
 // CACHER LES VARIANTES QUI N'EXISTENT PAS
 jQuery('.variations_form').on("woocommerce_update_variation_values", function(){

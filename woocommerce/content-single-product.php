@@ -30,12 +30,13 @@
 <main id="product">
     <div class="edition product-step step-1 -activeStep" data-step="1">
             <div class="row">
+                <h2 class="title -primary edition__title -mobile">Édition</h2>
                 <div class="half-col">
                     <img class="image" src="<?php echo $image ?>" alt="Édition">
                 </div>
 
                 <div class="half-col">
-                    <h2 class="title -primary edition__title">Édition</h2>
+                    <h2 class="title -primary edition__title -desktop">Édition</h2>
                     <div class="steps"></div>
                     <div class="toggle">
                         <a class="toggle__title title -custom -active">Originale</a>
@@ -45,11 +46,13 @@
                     <p class="text -small"><?php echo $description ?></p>
                     <span class="price">À partir de <strong><?php echo $price ?>€</strong></span>
 
-                    <a class="arrowlink -custom js-next-step">Suivant
+                    <a class="arrowlink -custom js-next-step -desktopFlex">Suivant
                         <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#000000"/>
                         </svg>
                     </a>
+
+                    <a class="button -dark next-bt js-next-step -mobileFlex">Suivant</a>
                 </div>
             </div>
     </div>
@@ -57,6 +60,7 @@
 
     <div class="style product-step step-2 -afterStep" data-step="2">
         <div class="row">
+            <h2 class="title -primary style__title -mobile">Style</h2>
             <div class="half-col">
                 <div class="image-wrapper">
                     <img class="image case-image style-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-style-{value}.png" src="<?php echo($upload_dir); ?>case-style-<?php echo $default_attributes[$attribute_case_style] ?>.png" alt="Style">
@@ -65,7 +69,7 @@
             </div>
 
             <div class="half-col">
-                <h2 class="title -primary style__title">Style</h2>
+                <h2 class="title -primary style__title -desktop">Style</h2>
                 <div class="steps"></div>
 
                 <div class="style__container">
@@ -132,11 +136,13 @@
                 <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
-                <a class="arrowlink -custom js-next-step">Suivant
+                <a class="arrowlink -custom js-next-step -desktopFlex">Suivant
                     <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#000000"/>
                     </svg>
                 </a>
+
+                <a class="button -dark next-bt js-next-step -mobileFlex">Suivant</a>
             </div>
         </div>
     </div>
@@ -144,6 +150,7 @@
 
     <div class="color product-step step-3 -afterStep" data-step="3">
         <div class="row">
+            <h2 class="title -primary color__title -mobile">Couleurs</h2>
             <div class="half-col">
                 <div class="image-wrapper">
                     <img class="image case-image couleur-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>case-color-<?php echo $default_attributes[$attribute_case_style] ?>-<?php echo $default_attributes[$attribute_case_color] ?>.png" alt="Couleurs">
@@ -152,7 +159,7 @@
             </div>
 
             <div class="half-col">
-                <h2 class="title -primary color__title">Couleurs</h2>
+                <h2 class="title -primary color__title -desktop">Couleurs</h2>
                 <div class="steps"></div>
 
                 <?php if($case_colors) : ?>
@@ -195,11 +202,13 @@
                 <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
-                <a class="arrowlink -custom js-next-step">Suivant
+                <a class="arrowlink -custom js-next-step -desktopFlex">Suivant
                     <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#000000"/>
                     </svg>
                 </a>
+
+                <a class="button -dark next-bt js-next-step -mobileFlex">Suivant</a>
             </div>
         </div>
     </div>
@@ -207,6 +216,7 @@
 
     <div class="size product-step step-4 -afterStep" data-step="4">
         <div class="row">
+            <h2 class="title -primary size__title -mobile">Taille</h2>
             <div class="half-col">
             <div class="image-wrapper">
                     <img class="image case-image couleur-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>case-color-<?php echo $default_attributes[$attribute_case_style] ?>-<?php echo $default_attributes[$attribute_case_color] ?>.png" alt="Taille">
@@ -215,7 +225,7 @@
             </div>
 
             <div class="half-col">
-                <h2 class="title -primary size__title">Taille</h2>
+                <h2 class="title -primary size__title -desktop">Taille</h2>
                 <div class="steps"></div>
 
                 <div class="size__case">
@@ -248,7 +258,10 @@
                 <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
-                <a class="button -gradient js-add-to-cart"><?php get_template_part('icons/cart') ?>Ajouter au panier</a>
+                
+                <a class="button -gradient add-to-cart-bt js-add-to-cart -desktopFlex"><?php get_template_part('icons/cart') ?>Ajouter au panier</a>
+
+                <a class="button -gradient next-bt js-add-to-cart -mobileFlex">Ajouter au panier</a>
             </div>
         </div>
     </div>
