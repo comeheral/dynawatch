@@ -22,9 +22,9 @@
     $band_colors =          $attributes[$attribute_band_color]["options"];
     $band_sizes =          $attributes[$attribute_band_size]["options"];
 
-    /* echo "<pre style='margin-top: 100px;'>";
-        print_r($image);
-    echo "</pre>"; */
+    echo "<pre style='margin-top: 100px;'>";
+        print_r($product);
+    echo "</pre>";
 ?>
 
 <main id="product">
@@ -129,7 +129,7 @@
                 endif;
                 ?>
                 
-                <span class="price">À partir de <strong><?php echo $price ?>€</strong></span>
+                <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
                 <a class="arrowlink -custom js-next-step">Suivant
@@ -192,7 +192,7 @@
                     
                 </div>
 
-                <span class="price">À partir de <strong><?php echo $price ?>€</strong></span>
+                <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
                 <a class="arrowlink -custom js-next-step">Suivant
@@ -245,7 +245,7 @@
                 <p class="text -small">Vous ne savez pas quelle taille de bracelet vous correspond ?<br/>
                     Déterminez la taille de votre poignet grâce à notre outil de mesure que vous pouvez imprimer.</p>
 
-                <span class="price">À partir de <strong><?php echo $price ?>€</strong></span>
+                <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                 <a class="js-prev-step">Retour</a>
                 <a class="button -gradient js-add-to-cart">Ajouter au panier</a>

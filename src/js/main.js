@@ -22,10 +22,12 @@ let activeBandValue = jQuery('.band-item.-active').data('value');
 jQuery('.case-desc.'+activeCaseValue).show();
 jQuery('.band-desc.'+activeBandValue).show();
 
+
 // Clic sur variante
 jQuery('.variant-item').click(function(){
     jQuery(this).parent().find('.variant-item').removeClass('-active');
     jQuery(this).addClass('-active');
+    
 
     if (jQuery(this).hasClass('case-item') && jQuery(this).hasClass('style-item')){ // Si sélection du style du boitier
         jQuery('.case-desc').hide();
@@ -64,14 +66,18 @@ jQuery('.variant-item').click(function(){
         $image.attr('src', src);
     }
 
+    // Sélectionne le select par défaut pour changer sa valeur
     let attribute = jQuery(this).data('attribute');
     let value = jQuery(this).data('value');
-
-    // Sélectionne le select par défaut pour changer sa valeur
     let $select = document.getElementById(attribute);
     $select.value = value;
-
     jQuery($select).trigger("change.wc-variation-form");
+
+    // Mise à jour du prix
+    let price = jQuery('.woocommerce-variation-price bdi').text();
+    price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
+    
+    jQuery('.js-price strong').text(price);
 })
 
 jQuery('.js-add-to-cart').click(function(e){
@@ -91,6 +97,14 @@ jQuery('.js-next-step').click(function(e){
     jQuery(this).closest('.product-step').removeClass('-activeStep').addClass('-beforeStep'); // Set active step to previous step
     jQuery('.step-' + nextValue).removeClass('-afterStep').addClass('-activeStep'); // Set next step to active step
     window.location.hash = 'step-' + nextValue;
+})
+
+// Prix affiché par défaut pour le style et les couleurs
+jQuery('.edition .js-next-step').click(function(){
+    let price = jQuery('.woocommerce-variation-price bdi').text();
+    console.log(price);
+    price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
+    jQuery('.js-price strong').text(price);
 })
 
 // Étape précédente

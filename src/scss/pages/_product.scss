@@ -35,17 +35,16 @@
 
     .image-wrapper{
         position: relative;
-        width: 100%;
-        
-        .image{
-            width: 100%;
+        width: 100%; 
+    }
 
-            &.-absolute{
-               position: absolute;
-                top: 0;
-                left: 0; 
-            }  
-        }
+    .image{
+        width: 100%;
+        &.-absolute{
+           position: absolute;
+            top: 0;
+            left: 0; 
+        }  
     }
 
     .price{
