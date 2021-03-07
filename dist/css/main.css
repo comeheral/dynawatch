@@ -1102,6 +1102,21 @@ ul {
   }
 }
 
+.description-banner {
+  background-color: black;
+  text-align: center;
+  padding-bottom: 30px;
+  height: 100vh;
+}
+
+.description-banner .banner-title {
+  padding-top: 200px;
+}
+
+.description-banner .description-banner-image {
+  margin: 0 auto;
+}
+
 body {
   margin-top: 60px;
 }
