@@ -42,7 +42,10 @@ body{
 
 // Hide default Woocommerce product form
 .single-product .summary{
-    /* display: none; */
-    position: relative;
-    z-index: 99;
+    display: none;
+    /* position: relative;
+    z-index: 99; */
 }
+
+// TEMPORAIRE : Barre admin wordpress
+.nav{top: 32px;}
