@@ -4,7 +4,9 @@
     $upload_dir =           wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */;
     $idProduct =            get_the_ID();
     $product =              wc_get_product($idProduct);
+    $image =                wp_get_attachment_url( $product->get_image_id() );
     $price =                $product->price;
+    $description =          $product->description;
     $attributes =           $product->attributes;
     $default_attributes =   $product->default_attributes;
     $attribute_case_style = "style-du-boitier";
@@ -20,12 +22,8 @@
     $band_colors =          $attributes[$attribute_band_color]["options"];
     $band_sizes =          $attributes[$attribute_band_size]["options"];
 
-    $available = $product->get_available_variations();
-    $variation = $product->get_variation_attributes();
-    $product_name = $product->get_attribute( 'style-du-bracelet' );
-
     /* echo "<pre style='margin-top: 100px;'>";
-        print_r($available);
+        print_r($image);
     echo "</pre>"; */
 ?>
 
@@ -33,21 +31,18 @@
     <div class="edition product-step step-1 -activeStep" data-step="1">
             <div class="row">
                 <div class="half-col">
-                    <img class="image" src="<?php echo($upload_dir); ?>hermes.jpg" alt="Édition">
+                    <img class="image" src="<?php echo $image ?>" alt="Édition">
                 </div>
 
                 <div class="half-col">
                     <h2 class="title -primary edition__title">Édition</h2>
                     <div class="steps"></div>
                     <div class="toggle">
-                        <h3 class="toggle__title title -custom">Originale</h3>
-                        <h3 class="toggle__title title -custom">Nike edition</h3>
-                        <h3 class="toggle__title title -custom -active">Hermes edition</h3>
+                        <a class="toggle__title title -custom -active">Originale</a>
+                        <a class="toggle__title title -custom">Nike edition</a>
+                        <a class="toggle__title title -custom">Hermes edition</a>
                     </div>
-                    <p class="text -small">Grâce à notre collaboration avec Hermès, vous pouvez profiter de bracelets exclusifs plus luxueux les uns que 
-                        les autres. Les cadrans exclusifs, tournés vers l’avenir, sont toujours plus personnalisables. Le style intemporel 
-                        d’Hermès se manifeste dans l’élégance des bracelets et de la nouvelle barrette de fixation subtilement repensée. 
-                        Soyez à la pointe de la mode avec la Dynawatch édition Hermès.</p>
+                    <p class="text -small"><?php echo $description ?></p>
                     <span class="price">À partir de <strong><?php echo $price ?>€</strong></span>
 
                     <a class="arrowlink -custom js-next-step">Suivant
@@ -64,8 +59,8 @@
         <div class="row">
             <div class="half-col">
                 <div class="image-wrapper">
-                    <img class="image case-image -absolute" data-source="<?php echo($upload_dir); ?>case-style-{value}.png" src="<?php echo($upload_dir); ?>case-style-<?php echo $default_attributes[$attribute_case_style] ?>.png" alt="Style">
-                    <img class="image band-image" data-source="<?php echo($upload_dir); ?>band-style-{value}.png" src="<?php echo($upload_dir); ?>band-style-<?php echo $default_attributes[$attribute_band_style] ?>.png" alt="Style">
+                    <img class="image case-image style-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-style-{value}.png" src="<?php echo($upload_dir); ?>case-style-<?php echo $default_attributes[$attribute_case_style] ?>.png" alt="Style">
+                    <img class="image band-image style-du-bracelet" data-source="<?php echo($upload_dir); ?>band-style-{value}.png" src="<?php echo($upload_dir); ?>band-style-<?php echo $default_attributes[$attribute_band_style] ?>.png" alt="Style">
                 </div>
             </div>
 
@@ -82,7 +77,7 @@
                                 $isActive = ($default_attributes[$attribute_case_style] == $case_style) ? "-active" : "";
                                 $className = strtolower($case_style);
                             ?>
-                            <div class="case-item variant-item <?php echo $attribute_case_style ?> <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_case_style; ?>" data-value="<?php echo $case_style; ?>">
+                            <div class="case-item style-item variant-item <?php echo $attribute_case_style ?> <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_case_style; ?>" data-value="<?php echo $case_style; ?>">
                                 <div class="case-select <?php echo $className ?>"></div>
                             </div>
                         <?php endforeach; ?>
@@ -98,7 +93,7 @@
                                 $isActive = ($default_attributes[$attribute_band_style] == $band_style) ? "-active" : "";
                                 $className = strtolower($band_style);
                             ?>
-                            <div class="band-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_band_style; ?>" data-value="<?php echo $band_style; ?>">
+                            <div class="band-item style-item variant-item <?php echo $isActive; ?>" data-attribute="<?php echo $attribute_band_style; ?>" data-value="<?php echo $band_style; ?>">
                                 <div class="band-select <?php echo $className ?>" style="background: center url('<?php echo($upload_dir); ?>/<?php echo $className ?>-variant.jpg');"></div>
                             </div>
                         <?php endforeach; ?>
@@ -150,7 +145,10 @@
     <div class="color product-step step-3 -afterStep" data-step="3">
         <div class="row">
             <div class="half-col">
-                <img class="image" data-src="<?php echo($upload_dir); ?>/watch-{color}.jpg" src="<?php echo($upload_dir); ?>/colors.jpg" alt="Couleurs">
+                <div class="image-wrapper">
+                    <img class="image case-image couleur-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>case-color-<?php echo $default_attributes[$attribute_case_style] ?>-<?php echo $default_attributes[$attribute_case_color] ?>.png" alt="Couleurs">
+                    <img class="image band-image couleur-du-bracelet" data-source="<?php echo($upload_dir); ?>band-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>band-color-<?php echo $default_attributes[$attribute_band_style] ?>-<?php echo $default_attributes[$attribute_band_color] ?>.png" alt="Couleurs">
+                </div>
             </div>
 
             <div class="half-col">
@@ -210,7 +208,10 @@
     <div class="size product-step step-4 -afterStep" data-step="4">
         <div class="row">
             <div class="half-col">
-                <img class="image" src="<?php echo($upload_dir); ?>/colors.jpg" alt="taille">
+            <div class="image-wrapper">
+                    <img class="image case-image couleur-du-boitier -absolute" data-source="<?php echo($upload_dir); ?>case-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>case-color-<?php echo $default_attributes[$attribute_case_style] ?>-<?php echo $default_attributes[$attribute_case_color] ?>.png" alt="Taille">
+                    <img class="image band-image couleur-du-bracelet" data-source="<?php echo($upload_dir); ?>band-color-{attribute}-{value}.png" src="<?php echo($upload_dir); ?>band-color-<?php echo $default_attributes[$attribute_band_style] ?>-<?php echo $default_attributes[$attribute_band_color] ?>.png" alt="Taille">
+                </div>
             </div>
 
             <div class="half-col">

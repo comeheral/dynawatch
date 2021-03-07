@@ -27,31 +27,42 @@ jQuery('.variant-item').click(function(){
     jQuery(this).parent().find('.variant-item').removeClass('-active');
     jQuery(this).addClass('-active');
 
-
-    if (jQuery(this).hasClass('case-item')){ // Si sélection du style du boitier
+    if (jQuery(this).hasClass('case-item') && jQuery(this).hasClass('style-item')){ // Si sélection du style du boitier
         jQuery('.case-desc').hide();
         let caseValue = jQuery(this).data('value');
         jQuery('.case-desc.'+ caseValue).show();
 
         // Changement de l'image
-        let $image = jQuery('.case-image');
+        let caseAttribute = jQuery(this).data('attribute');
+        let $image = jQuery('.case-image'); // Selectionner toutes les images de boitier
         let src = $image.data('source');
         src = src.replace('{value}', caseValue);
         $image.attr('src', src);
 
-
-    }else if (jQuery(this).hasClass('band-item')){ // Si sélection du style du bracelet
+    }else if (jQuery(this).hasClass('band-item') && jQuery(this).hasClass('style-item')){ // Si sélection du style du bracelet
         jQuery('.band-desc').hide();
         let bandValue = jQuery(this).data('value');
         jQuery('.band-desc.'+ bandValue).show();
 
         // Changement de l'image
-        let $image = jQuery('.band-image');
+        let bandAttribute = jQuery(this).data('attribute');
+        let $image = jQuery('.band-image'); // Selectionner toutes les images de bracelet
         let src = $image.data('source');
         src = src.replace('{value}', bandValue);
         $image.attr('src', src);
-    }
 
+    }else if (jQuery(this).hasClass('case-item') && jQuery(this).hasClass('color-item')){
+
+        // Changement de l'image
+        let caseValue = jQuery(this).data('value');
+        let caseAttribute = jQuery(this).data('attribute');
+        let $image = jQuery('.case-image.' + caseAttribute);
+        let src = $image.data('source');
+        let styleValue = jQuery('.case-item.style-item.-active').data('value');
+
+        src = src.replace('{value}', caseValue).replace('{attribute}', styleValue);
+        $image.attr('src', src);
+    }
 
     let attribute = jQuery(this).data('attribute');
     let value = jQuery(this).data('value');
@@ -100,7 +111,6 @@ jQuery('.js-prev-step').click(function(e){
 
 // CACHER LES VARIANTES QUI N'EXISTENT PAS
 jQuery('.variations_form').on("woocommerce_update_variation_values", function(){
-    console.log('refresh form')
 
     let $form = jQuery(this);
 
