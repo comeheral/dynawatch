@@ -18,10 +18,9 @@
 
 
 <h1 class="banner-title title -primary -white"><?php echo $title ?></h1>
-<h2 class="title -primary -white"><?php echo $subtitle ?></h2>
-<p class="-white"><?php echo $text ?></p>
+<h2 class="title -primary -gradient"><?php echo $subtitle ?></h2>
+<p class="description-text text -white"><?php echo $text ?></p>
 
-<a class="arrowlink -white" href="<?php echo $link['url'] ?>">À partir de <strong><?php echo $price ?></strong><?php get_template_part('icons/gradient-arrow') ?></a>
+<a class="arrowlink text -white" href="<?php echo $link['url'] ?>"><p class="text-arrow">À partir de</p><strong><?php echo $price ?></strong><?php get_template_part('icons/gradient-arrow') ?></a>
 
-
-<img class="description-banner-image" src="<?php echo($upload_dir); ?>/description-banner.png" alt="banner">
+<!--<img class="description-banner-image" src="<?php echo($upload_dir); ?>/description-banner.png" alt="banner">-->
