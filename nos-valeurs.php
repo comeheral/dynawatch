@@ -12,11 +12,13 @@ if( have_posts() ):
         $postData = get_post($postID);
     ?>
 
-        <div class="nos-valeurs-banner">
-            <?php get_template_part('template-parts/nos-valeurs-banner'); ?>
-        </div>
+        <div id="nos-valeurs">
+            <div class="nos-valeurs-banner">
+                <?php get_template_part('template-parts/nos-valeurs-banner'); ?>
+            </div>
 
-        <?php get_template_part('template-parts/nos-valeurs-sections'); ?>
+            <?php get_template_part('template-parts/nos-valeurs-sections'); ?>
+        </div>
 
         <?php
 
