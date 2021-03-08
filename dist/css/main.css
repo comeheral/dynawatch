@@ -61,24 +61,16 @@ ul {
   }
 }
 
-#product .gris {
-  background: grey !important;
-}
-
-#product .bleu {
-  background: blue !important;
-}
-
-#product .noir {
-  background: black !important;
-}
-
 #product .style-du-boitier .aluminium {
   background: linear-gradient(180deg, #EBEAEA 0%, #CBCBCB 100%) !important;
 }
 
 #product .style-du-boitier .acier {
   background: linear-gradient(180deg, #E8E8E8 0%, #EDEDED 37.5%, #D5D5D5 37.51%, #EAEAEA 100%) !important;
+}
+
+#product .couleur-du-boitier .noir {
+  background: linear-gradient(225deg, #4F4F4F 8.75%, #292929 91.25%) !important;
 }
 
 #product .couleur-du-boitier .or {
@@ -95,6 +87,10 @@ ul {
 
 #product .couleur-du-boitier .rouge {
   background: linear-gradient(45deg, #BF3D3D 7.73%, #BB3535 7.73%, #FF6969 92.17%) !important;
+}
+
+#product .couleur-du-boitier .bleu {
+  background: linear-gradient(225deg, #5C81CA 8.75%, #294A9F 91.25%) !important;
 }
 
 #product .couleur-du-bracelet .bleu {
@@ -115,6 +111,14 @@ ul {
 
 #product .couleur-du-bracelet .rouge {
   background: linear-gradient(45deg, #BF3D3D 7.73%, #BB3535 7.73%, #FF6969 92.17%) !important;
+}
+
+#product .couleur-du-bracelet .or {
+  background: linear-gradient(225deg, #FFDB95 8.75%, #CCB381 91.25%) !important;
+}
+
+#product .couleur-du-bracelet .argent {
+  background: linear-gradient(45deg, #B5B5B5 7.73%, #9B9B9B 7.73%, #E0E0E0 100%) !important;
 }
 
 .button {

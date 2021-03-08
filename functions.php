@@ -9,6 +9,12 @@
 
     add_action('wp_enqueue_scripts', 'add_styles_and_scripts');
 
+    
+    function wc_increase_variation_threshold( $product ) {
+        return 500;
+    }
+    add_filter( 'woocommerce_ajax_variation_threshold', 'wc_increase_variation_threshold', 10, 2 );
+
 
 
     /* Ajout des pages d'options */

@@ -4,6 +4,16 @@ function calculateHeight(){
     jQuery('#product').height(stepHeight);
 }
 
+function updatePrice(){
+    var price = jQuery('.woocommerce-variation-price bdi').text();
+    if(price == ""){
+        var price = jQuery('.summary bdi').text();
+    }
+    price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
+    
+    jQuery('.js-price strong').text(price);
+}
+
 // Reload
 jQuery(document).ready(function(){
     jQuery('html').scrollLeft(0);
@@ -101,10 +111,7 @@ jQuery('.variant-item').click(function(){
     jQuery($select).trigger("change.wc-variation-form");
 
     // Mise à jour du prix
-    let price = jQuery('.woocommerce-variation-price bdi').text();
-    price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
-    
-    jQuery('.js-price strong').text(price);
+    updatePrice();
 })
 
 // Reset colors quand clic sur variantes de style
@@ -141,9 +148,7 @@ jQuery('.js-next-step').click(function(e){
 
 // Prix affiché par défaut pour le style et les couleurs
 jQuery('.edition .js-next-step').click(function(){
-    let price = jQuery('.woocommerce-variation-price bdi').text();
-    price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
-    jQuery('.js-price strong').text(price);
+    updatePrice();
 })
 
 // Étape précédente
