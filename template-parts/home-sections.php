@@ -50,8 +50,7 @@
 
             <?php elseif($type === 'background') : ?>
 
-            <div class="section-background" style="background-color: <?php echo $color ?>"
-                <div class=" row home-section" <?php if($order === 'right') : ?>flex-direction: row-reverse<?php endif; ?>">
+                <div class="row home-section section-background"  style="background-color: <?php echo $color ?>; <?php if($order === 'right') : ?>flex-direction: row-reverse<?php endif; ?>">
                     <div class="half-col v-centered">
                         <img class="section-image" src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
@@ -63,7 +62,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
             <?php elseif($type === 'features') : ?>
 
