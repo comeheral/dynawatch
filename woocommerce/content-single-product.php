@@ -162,7 +162,7 @@
 
     <div class="color product-step step-3 -afterStep" data-step="3">
         <div class="row">
-            <a class="arrowlink -custom -back js-prev-step"><?php get_template_part('icons/prev-arrow') ?><span>Retour</span></a>
+            <a class="arrowlink -custom -back js-prev-step color-back"><?php get_template_part('icons/prev-arrow') ?><span>Retour</span></a>
             <h2 class="title -primary color__title -mobile">Couleurs</h2>
             <div class="half-col">
                 <div class="image-wrapper">

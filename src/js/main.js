@@ -114,11 +114,17 @@ jQuery('.variant-item').click(function(){
     updatePrice();
 })
 
-// Reset colors quand clic sur variantes de style
+// Reset couleurs quand clic sur variantes de style
 jQuery('.case-item.style-item').click(function(){
     jQuery('.case-item.color-item').first().click();
 })
 jQuery('.band-item.style-item').click(function(){
+    jQuery('.band-item.color-item').first().click();
+})
+
+// Reset couleurs quand retour à l'étape de style
+jQuery('.arrowlink.color-back').click(function(){
+    jQuery('.case-item.color-item').first().click();
     jQuery('.band-item.color-item').first().click();
 })
 
