@@ -1005,6 +1005,12 @@ html {
   overflow-x: hidden;
 }
 
+@media (min-width: 768px) {
+  html.-productNoscroll {
+    overflow-y: hidden;
+  }
+}
+
 body {
   /* margin-top: 60px; */
 }

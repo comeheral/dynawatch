@@ -19,6 +19,11 @@ jQuery(document).ready(function(){
     jQuery('html').scrollLeft(0);
     jQuery('#product').css('opacity', 1);
 
+    // Ajouter noscroll sur html si page produit
+    if(window.location.href.indexOf('/produit/') != -1){
+        jQuery('html').addClass('-productNoscroll');
+    }
+
     calculateHeight();
 })
 

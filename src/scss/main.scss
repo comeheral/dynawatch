@@ -25,6 +25,12 @@
 
 html{
     overflow-x: hidden;
+
+    &.-productNoscroll{
+        @include media-breakpoint-up(md){
+            overflow-y: hidden;
+        }
+    }
 }
 
 body{
