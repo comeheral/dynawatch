@@ -78,6 +78,19 @@ jQuery('.variant-item').click(function(){
 
         src = src.replace('{value}', caseValue).replace('{attribute}', styleValue);
         $image.attr('src', src);
+
+    }else if (jQuery(this).hasClass('band-item') && jQuery(this).hasClass('color-item')){
+
+        // Changement de l'image
+        let caseValue = jQuery(this).data('value');
+        let caseAttribute = jQuery(this).data('attribute');
+        let $image = jQuery('.band-image.' + caseAttribute);
+        let src = $image.data('source');
+        let styleValue = jQuery('.band-item.style-item.-active').data('value');
+
+        src = src.replace('{value}', caseValue).replace('{attribute}', styleValue);
+        $image.attr('src', src);
+
     }
 
     // Sélectionne le select par défaut pour changer sa valeur
@@ -92,6 +105,14 @@ jQuery('.variant-item').click(function(){
     price = price.split(',')[0] + '€'; // Retirer à partir de la virgue puis ajoute le sigle €
     
     jQuery('.js-price strong').text(price);
+})
+
+// Reset colors quand clic sur variantes de style
+jQuery('.case-item.style-item').click(function(){
+    jQuery('.case-item.color-item').first().click();
+})
+jQuery('.band-item.style-item').click(function(){
+    jQuery('.band-item.color-item').first().click();
 })
 
 jQuery('.js-add-to-cart').click(function(e){
@@ -163,6 +184,34 @@ jQuery('.variations_form').on("woocommerce_update_variation_values", function(){
     let $bandStyle = jQuery('.style .band-item');
     $bandStyle.show();
     $bandStyle.each(function(){
+        let attribute = jQuery(this).data('attribute');
+        let value = jQuery(this).data('value');
+
+        let selectValue = $form.find('select#' + attribute).find('option[value="'+ value +'"]');
+
+        if (!selectValue.length > 0){
+            jQuery(this).hide();
+        }
+    })
+
+    // Couleur du boîtier
+    let $caseColor = jQuery('.color .case-item');
+    $caseColor.show();
+    $caseColor.each(function(){
+        let attribute = jQuery(this).data('attribute');
+        let value = jQuery(this).data('value');
+
+        let selectValue = $form.find('select#' + attribute).find('option[value="'+ value +'"]');
+
+        if (!selectValue.length > 0){
+            jQuery(this).hide();
+        }
+    })
+
+    // Couleur du bracelet
+    let $bandColor = jQuery('.color .band-item');
+    $bandColor.show();
+    $bandColor.each(function(){
         let attribute = jQuery(this).data('attribute');
         let value = jQuery(this).data('value');
 

@@ -1016,9 +1016,9 @@ body.-noscroll {
 }
 
 .single-product .summary {
-  display: none;
-  /* position: relative;
-    z-index: 99; */
+  /* display: none; */
+  position: relative;
+  z-index: 99;
 }
 
 #wpadminbar {
