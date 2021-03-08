@@ -3,7 +3,7 @@
     justify-content: center !important;
     align-items: center !important;
     width: 220px !important;
-    height: 50px !important;
+    height: 40px !important;
     border-radius: 4px !important;
     margin-bottom: 20px !important;
     border: 0 !important;
@@ -78,5 +78,16 @@
     &.-custom{
         font-size: 20px;
         text-transform: uppercase;
+    }
+
+    &.-back{
+        svg{
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        &:hover svg{
+            transform: translateX(-10px);
+        }
     }
 }

@@ -8,7 +8,7 @@
 @import './foundation/variables';
 @import './foundation/mixins';
 @import './foundation/grid';
-/* @import './foundation/grid'; */
+@import './foundation/variants';
 
 //Import Elements
 @import './elements/buttons';
@@ -24,8 +24,18 @@
 @import './pages/homepage';
 @import './pages/nos-valeurs';
 
+html{
+    overflow-x: hidden;
+
+    &.-productNoscroll{
+        @include media-breakpoint-up(md){
+            overflow-y: hidden;
+        }
+    }
+}
+
 body{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     &.-noscroll{
         overflow: hidden;
     }
@@ -37,12 +47,16 @@ body{
     justify-content: center !important;
 }
 
-.gris{
-    background: grey !important;
+// Hide default Woocommerce product form
+.single-product .summary{
+    display: none;
+    /* position: relative;
+    z-index: 99; */
 }
 
-.bleu{background: blue !important;}
-
-.noir{
-    background: black !important;
+#wpadminbar{
+    display: none;
 }
+
+// TEMPORAIRE : Barre admin wordpress
+/* .nav{top: 32px;} */
