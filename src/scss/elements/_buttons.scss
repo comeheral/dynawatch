@@ -79,4 +79,15 @@
         font-size: 20px;
         text-transform: uppercase;
     }
+
+    &.-back{
+        svg{
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        &:hover svg{
+            transform: translateX(-10px);
+        }
+    }
 }

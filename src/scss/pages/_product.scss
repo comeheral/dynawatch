@@ -55,6 +55,7 @@
         }
     }
 
+    .row{position: relative;}
     .half-col{position: relative;}
 
     .title.-mobile{
@@ -94,6 +95,26 @@
         cursor: pointer;
     }
 
+    .arrowlink.-back{
+        top: 16px;
+        left: 30px;
+        z-index: 10;
+        height: fit-content;
+
+        svg{
+            height: 15px;
+            width: auto;
+        }
+
+        span{display: none;}
+
+        @include media-breakpoint-up(md){
+            top: -24px;
+            svg{height: auto;}
+            span{display: block;}
+        }
+    }
+
     .button.next-bt{
         width: auto !important;
         border-radius: 10px !important;
@@ -129,6 +150,7 @@
             &__title{
                 padding-bottom: 4px;
                 white-space: nowrap;
+                text-decoration: none;
                 @include media-breakpoint-up(md){
                     margin-right: 40px;
                 }
