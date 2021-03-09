@@ -573,7 +573,9 @@ ul {
 @media (min-width: 768px) {
   .footer__details, .footer__menu, .footer__description {
     text-align: left;
-    width: 220px;
+    width: auto;
+    max-width: 220px;
+    margin-bottom: 0;
   }
 }
 
