@@ -1347,6 +1347,96 @@ ul {
   }
 }
 
+.faq {
+  margin-top: 80px;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .faq {
+    margin-top: 120px;
+  }
+}
+
+.faq__title {
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 80px;
+  background: linear-gradient(94.33deg, #FFC46B 0%, #FF7D78 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .faq__title {
+    font-size: 120px;
+    margin-bottom: 100px;
+  }
+}
+
+.faq__content {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .faq__content {
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+.faq h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .faq h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.faq p {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  line-height: 160%;
+  color: #888888;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .faq p {
+    font-size: 18px;
+    margin-bottom: 80px;
+  }
+}
+
+.faq__contact {
+  margin-top: 80px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 160%;
+  color: #888888;
+}
+
+.faq__contact a {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .faq__contact {
+    margin-top: 120px;
+    font-size: 22px;
+  }
+}
+
 html {
   overflow-x: hidden;
 }
