@@ -1,9 +1,12 @@
+<?php $upload_dir = wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */; ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <head>
     <meta charset="<?php bloginfo("charset"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo("name"); ?> - <?php the_title() ?> </title>
+    <link rel="icon" type="image/png" href="<?php echo($upload_dir); ?>/favicon.png" />
 
     <?php wp_head(); ?>
     <?php $upload_dir = wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */; ?>
