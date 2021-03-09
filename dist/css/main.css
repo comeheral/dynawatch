@@ -400,6 +400,13 @@ ul {
   transform: translateX(0);
 }
 
+.burger .burger-blob {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+}
+
 .nav {
   height: 60px;
   width: 100vw;
@@ -445,12 +452,12 @@ ul {
   }
 }
 
-.nav__item {
+.nav__list li {
   display: inline-block;
   margin-right: 40px;
 }
 
-.nav__item a {
+.nav__list li a {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 700;
