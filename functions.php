@@ -16,6 +16,11 @@
     add_filter( 'woocommerce_ajax_variation_threshold', 'wc_increase_variation_threshold', 10, 2 );
 
 
+    // Menus
+    add_theme_support( 'menus' );
+    register_nav_menu('footer', 'Pied de page');
+
+
 
     /* Ajout des pages d'options */
 
