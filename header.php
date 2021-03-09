@@ -53,7 +53,7 @@
                 <li class="nav__item"><a href="#">Nos valeurs</a></li>
             </ul>
 
-            <a class="button nav__button -small -gradient" href="#">Acheter</a>
+            <a class="button nav__button -small -gradient" href="/test-git">Acheter</a>
 
             <a class="nav__icon cart" href="#">
                 <?php get_template_part('icons/cart') ?>
