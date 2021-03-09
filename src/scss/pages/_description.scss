@@ -19,11 +19,18 @@
 
     .description-text{
         padding : 30px 0 50px;
+        @include media-breakpoint-up(md){
+        margin : 0 auto !important;
+        padding : 50px 0;
+        }
     }
 
     .text{
         text-align : center;
         margin : 0 30px;
+        @include media-breakpoint-up(md){
+            text-align : center;
+        }
     }
 
     .text-arrow{
@@ -43,11 +50,12 @@
         position : absolute;
         z-index : -1;
         top : -35px;
+        //margin-top : -40px;
     }
 
     .banner-title{
         font-size : 30px;
-        margin : 70px auto 0;
+        margin : 80px auto 0;
         text-align : center;
         @include media-breakpoint-up(md){
             font-size : 70px;
@@ -67,11 +75,19 @@
 .section-image-background{
     width : 100vw;
     margin : 0 auto;
+    @include media-breakpoint-up(md){
+        width : 100%;
+        overflow-x: hidden;
+    }
 }
 
 //SECTION 2 IMAGES SUR UNE SEULE LIGNE / JUSTE EN DESSOUS DE OXYGENE DANS LE SANG
 .section-txtImage{
     margin-bottom : -50px;
+    padding-bottom : 30px;
+    @include media-breakpoint-up(md){
+        margin-top : 600px;
+    }
     .section-images{
         margin : 20px 5vw 0 5vw !important;
         text-align : center;
@@ -82,12 +98,27 @@
 
     .text{
         margin : 0 30px !important;
+        @include media-breakpoint-up(md){
+            margin : 50px auto !important;
+            width : 100vw !important;
+        }
     }
 }
 
 //SECTION BASIQUE
 .section-basic{
-    margin : 120px 0 50px;
+    margin : 100px 0 ;
+    @include media-breakpoint-up(md){
+        margin : 180px auto;
+        //padding-top : 100px;
+    }
+    .section-banner{
+        .banner-title{
+            @include media-breakpoint-up(md){
+                top : 150px;
+            }
+        }
+    }
 }
 
 //SECTION BACKGROUND
@@ -96,14 +127,55 @@
     margin-bottom : -30px;
     position : relative;
     height : 550px;
+    @include media-breakpoint-up(md){
+        height : 390px;
+        padding : 90px 0;
+    }
     .section-image{
         position : absolute;
         width : 80vw;
         top : 320px;
+        @include media-breakpoint-up(md){
+            width : 39vw;
+            top : -95px;;
+        }
+    }
+    .description-section{
+        .half-col .v-centered{
+            .background-content{
+                @include media-breakpoint-up(md){
+                    margin-top : 150px !important;
+                }
+            }
+        }
     }
 }
 
 //SECTION BACKGROUND COLOR 
 .section-background2{
     background-color : $black;
+    margin-bottom : -50px;
+    .background-content{
+        .title-background2{
+            text-align : center;
+            margin-top : 40px;
+            width : 230px !important;
+            @include media-breakpoint-up(md){
+                width : 45vw !important;
+                padding-top : 40px;
+            }
+
+        }
+
+        .subtitle-background2{
+            font-size : 16px;
+            text-align : center;
+            margin : 20px 0;
+        }
+
+        .burger__button{
+            @include media-breakpoint-up(md){
+                margin : 40px auto 60px;            }
+        }
+    }
 }

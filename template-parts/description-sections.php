@@ -64,8 +64,8 @@
                 <div class="row description-section">
 
                 <div class="background-content">
-                    <h1 class="title -secondary -white"><?php echo $title ?></h1>
-                    <h2 class="title -white"><?php echo $subtitle ?></h2>
+                    <h1 class="title-background2 title -secondary -white"><?php echo $title ?></h1>
+                    <h2 class="subtitle-background2 title -white"><?php echo $subtitle ?></h2>
                     <a class="button burger__button -gradient" href="<?php echo $button['url'] ?>">
                         <?php echo $button['title'] ?>
                     </a>
@@ -96,6 +96,7 @@
                         <img class="image1" src="<?php echo $image2['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>">
                     </div>
                 </div>
+                
 
             <?php endif ; ?>
 
