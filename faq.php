@@ -16,7 +16,4 @@ Template Name: FAQ
     </div>
 </div>
 
-
-
-
 <?php get_footer(); ?>
