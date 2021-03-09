@@ -131,6 +131,7 @@ ul {
   margin-bottom: 20px !important;
   border: 0 !important;
   cursor: pointer !important;
+  opacity: 1 !important;
   font-family: "Ubuntu", sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
@@ -1719,6 +1720,10 @@ ul {
   margin: 0;
 }
 
+.cart {
+  margin-top: 100px;
+}
+
 .cart .woocommerce-cart-form {
   position: relative;
 }
@@ -1730,7 +1735,7 @@ ul {
 
 .cart__title {
   margin: 0;
-  text-align: left;
+  text-align: center;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -1869,6 +1874,37 @@ ul {
   background: #333;
 }
 
+.woocommerce {
+  /* .cart, .checkout {
+    .button {
+      background: $cart-button-background-color;
+      color: $cart-button-text-color;
+      border: 2px solid $cart-button-background-color;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      width : auto;
+      cursor: pointer;
+      outline: none;
+      font-weight: bold;
+      transition: 0.25s ease-in-out all;
+      margin-bottom: 10px;
+      &:hover {
+        color: $cart-button-background-color;
+        background: transparent;
+      }
+      &:disabled[disabled] {
+        color: $cart-button-text-color;
+        &:hover {
+          color: $cart-button-text-color;
+          background: $cart-button-background-color-hover;
+        }
+      }
+    }
+  } */
+}
+
 .woocommerce form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
   border-color: transparent transparent white transparent;
 }
@@ -1919,36 +1955,6 @@ ul {
 .woocommerce .shipping-calculator-form {
   text-align: center;
   padding-top: 16px;
-}
-
-.woocommerce .cart .button, .woocommerce .checkout .button {
-  background: #851262;
-  color: #fff;
-  border: 2px solid #851262;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  width: auto;
-  cursor: pointer;
-  outline: none;
-  font-weight: bold;
-  transition: 0.25s ease-in-out all;
-  margin-bottom: 10px;
-}
-
-.woocommerce .cart .button:hover, .woocommerce .checkout .button:hover {
-  color: #851262;
-  background: transparent;
-}
-
-.woocommerce .cart .button:disabled[disabled], .woocommerce .checkout .button:disabled[disabled] {
-  color: #fff;
-}
-
-.woocommerce .cart .button:disabled[disabled]:hover, .woocommerce .checkout .button:disabled[disabled]:hover {
-  color: #fff;
-  background: #fafafa;
 }
 
 .form__row {

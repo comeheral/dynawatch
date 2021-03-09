@@ -301,7 +301,7 @@ $checkout-space-between: 16px;
 }
 
 .cart {
-   
+   margin-top: 100px;
 
   .woocommerce-cart-form {
     position: relative;
@@ -313,7 +313,7 @@ $checkout-space-between: 16px;
   }
   &__title {
     margin: 0;
-    text-align: left;
+    text-align: center;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -482,7 +482,7 @@ $checkout-space-between: 16px;
     padding-top: $cart-space-between;
   }
 
-  .cart, .checkout {
+  /* .cart, .checkout {
     .button {
       background: $cart-button-background-color;
       color: $cart-button-text-color;
@@ -509,7 +509,7 @@ $checkout-space-between: 16px;
         }
       }
     }
-  }
+  } */
 }
 .form {
   &__row {
