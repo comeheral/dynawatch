@@ -1,3 +1,68 @@
+.error404-container .footer{
+    margin: 0;
+}
+
 .error404{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $title-font;
+    position: relative;
+
+    &__title{
+        font-size: 160px;
+        font-weight: 700;
+        line-height: 100%;
+        background: linear-gradient(94.33deg, $yellow 0%, $red 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-up(md){
+            font-size: 300px;
+        }
+    }
+
+    &__text{
+        font-size: 30px;
+        font-weight: 500;
+        color: $black;
+
+        @include media-breakpoint-up(md){
+            font-size: 50px;
+        }
+    }
     
+    &__link{
+        font-size: 16px;
+        color: #888888;
+        margin-top: 20px;
+
+        @include media-breakpoint-up(md){
+            font-size: 18px;
+        }
+    }
+
+    &__blob-1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 240px;
+
+        @include media-breakpoint-up(md){
+            height: auto;
+        }
+    }
+
+    &__blob-2{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 240px;
+
+        @include media-breakpoint-up(md){
+            height: auto;
+        }
+    }
 }
