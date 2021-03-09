@@ -1144,9 +1144,22 @@ ul {
   padding: 30px 0 50px;
 }
 
+@media (min-width: 768px) {
+  .description-banner .description-text {
+    margin: 0 auto !important;
+    padding: 50px 0;
+  }
+}
+
 .description-banner .text {
   text-align: center;
   margin: 0 30px;
+}
+
+@media (min-width: 768px) {
+  .description-banner .text {
+    text-align: center;
+  }
 }
 
 .description-banner .text-arrow {
@@ -1170,7 +1183,7 @@ ul {
 
 .section-banner .banner-title {
   font-size: 30px;
-  margin: 70px auto 0;
+  margin: 80px auto 0;
   text-align: center;
 }
 
@@ -1197,8 +1210,22 @@ ul {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .section-image-background {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 .section-txtImage {
   margin-bottom: -50px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .section-txtImage {
+    margin-top: 600px;
+  }
 }
 
 .section-txtImage .section-images {
@@ -1214,8 +1241,27 @@ ul {
   margin: 0 30px !important;
 }
 
+@media (min-width: 768px) {
+  .section-txtImage .text {
+    margin: 50px auto !important;
+    width: 100vw !important;
+  }
+}
+
 .section-basic {
-  margin: 120px 0 50px;
+  margin: 100px 0;
+}
+
+@media (min-width: 768px) {
+  .section-basic {
+    margin: 180px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-basic .section-banner .banner-title {
+    top: 150px;
+  }
 }
 
 .section-background {
@@ -1225,14 +1271,60 @@ ul {
   height: 550px;
 }
 
+@media (min-width: 768px) {
+  .section-background {
+    height: 390px;
+    padding: 90px 0;
+  }
+}
+
 .section-background .section-image {
   position: absolute;
   width: 80vw;
   top: 320px;
 }
 
+@media (min-width: 768px) {
+  .section-background .section-image {
+    width: 39vw;
+    top: -95px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-background .description-section .half-col .v-centered .background-content {
+    margin-top: 150px !important;
+  }
+}
+
 .section-background2 {
   background-color: #000000;
+  margin-bottom: -50px;
+}
+
+.section-background2 .background-content .title-background2 {
+  text-align: center;
+  margin-top: 40px;
+  width: 230px !important;
+}
+
+@media (min-width: 768px) {
+  .section-background2 .background-content .title-background2 {
+    width: 45vw !important;
+    padding-top: 40px;
+  }
+}
+
+.section-background2 .background-content .subtitle-background2 {
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .section-background2 .background-content .burger__button {
+    margin: 40px auto 60px;
+  }
 }
 
 body {
