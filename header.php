@@ -6,6 +6,7 @@
     <title><?php bloginfo("name"); ?> - <?php the_title() ?> </title>
 
     <?php wp_head(); ?>
+    <?php $upload_dir = wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */; ?>
     
 </head>
 <body>
@@ -35,6 +36,8 @@
                 </svg>
                 Acheter
             </a>
+
+            <img class="burger-blob" src="<?php echo($upload_dir); ?>/burger-blob.png" alt="Blob">
         </div>
 
         <div class="burger-toggle">
@@ -47,11 +50,17 @@
         </a>
 
         <div class="nav__container">
-            <ul class="nav__list">
+            <!-- <ul class="nav__list">
                 <li class="nav__item"><a href="#">Découvrir</a></li>
                 <li class="nav__item"><a href="#">Accessoires</a></li>
                 <li class="nav__item"><a href="#">Nos valeurs</a></li>
-            </ul>
+            </ul> -->
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'header',
+                'menu_class' => 'nav__list',
+                'container' => false,
+            )); ?>
 
             <a class="button nav__button -small -gradient" href="<?php bloginfo("url"); ?>/produit/Dynawatch">Acheter</a>
 

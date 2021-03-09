@@ -39,4 +39,11 @@
     &.-open{
         transform: translateX(0);
     }
+
+    .burger-blob{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: fit-content;
+    }
 }

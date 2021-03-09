@@ -38,18 +38,18 @@
             display: flex;
             align-items: center;
         }
-    }
 
-    &__item{
-        display: inline-block;
-        margin-right: 40px;
+        li{
+            display: inline-block;
+            margin-right: 40px;
 
-        a{
-            font-family: $title-font;
-            font-size: 16px;
-            font-weight: 700;
-            color: $dark;
-            text-decoration: none;
+            a{
+                font-family: $title-font;
+                font-size: 16px;
+                font-weight: 700;
+                color: $dark;
+                text-decoration: none;
+            }
         }
     }
 
