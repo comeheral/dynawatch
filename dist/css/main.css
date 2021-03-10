@@ -1287,6 +1287,7 @@ ul {
 }
 
 <<<<<<< develop
+<<<<<<< develop
 .error404-container .footer {
   margin: 0;
 }
@@ -1467,185 +1468,247 @@ html {
 =======
 .description-banner {
   background-color: black;
+=======
+#description .description-banner {
+>>>>>>> Dernières modifs SCSS + responsive
   text-align: center;
-  padding-bottom: 150px;
   position: relative;
-  margin-bottom: -80px;
+  height: 100vh;
 }
 
-.description-banner .banner-title {
-  padding-top: 200px;
+#description .description-banner .banner-title {
+  padding-top: 100px;
 }
 
-.description-banner .description-banner-image {
+@media (min-width: 768px) {
+  #description .description-banner .banner-title {
+    padding-top: 200px !important;
+  }
+}
+
+#description .description-banner .description-banner-image {
   position: absolute;
+<<<<<<< develop
   z-index: -1;
   margin: 0 auto;
 <<<<<<< develop
 >>>>>>> Création page Description
 =======
   left: 0;
+=======
+>>>>>>> Dernières modifs SCSS + responsive
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.description-banner .description-text {
+#description .description-banner .description-text {
   padding: 30px 0 50px;
 }
 
 @media (min-width: 768px) {
-  .description-banner .description-text {
+  #description .description-banner .description-text {
     margin: 0 auto !important;
     padding: 50px 0;
   }
 }
 
-.description-banner .text {
+#description .description-banner .text {
   text-align: center;
   margin: 0 30px;
 }
 
 @media (min-width: 768px) {
-  .description-banner .text {
+  #description .description-banner .text {
     text-align: center;
   }
 }
 
-.description-banner .text-arrow {
+#description .description-banner .text-arrow {
   padding-right: 8px;
 }
 
-.description-banner .arrowlink {
+#description .description-banner .arrowlink {
   margin: 0 auto !important;
 }
 
-.section-banner {
+#description .section-banner {
   position: relative;
   margin-bottom: 100px;
 }
 
-.section-banner .section-image-background {
+#description .section-banner .section-image-background {
   position: absolute;
   z-index: -1;
   top: -35px;
 }
 
-.section-banner .banner-title {
+#description .section-banner .banner-title {
   font-size: 30px;
   margin: 80px auto 0;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .section-banner .banner-title {
+  #description .section-banner .banner-title {
     font-size: 70px;
+    padding-top: 200px;
   }
 }
 
-.section-banner .banner-subtitle {
+#description .section-banner .banner-subtitle {
   font-size: 20px;
   margin: 0 auto 30px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .section-banner .banner-subtitle {
+  #description .section-banner .banner-subtitle {
     font-size: 40px;
   }
 }
 
-.section-image-background {
+#description .section-image-background {
   width: 100vw;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .section-image-background {
+  #description .section-image-background {
     width: 100%;
     overflow-x: hidden;
   }
 }
 
-.section-txtImage {
+#description .section-txtImage {
   margin-bottom: -50px;
   padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-  .section-txtImage {
-    margin-top: 600px;
+  #description .section-txtImage {
+    margin-top: 350px;
   }
 }
 
-.section-txtImage .section-images {
+#description .section-txtImage .section-images {
   margin: 20px 5vw 0 5vw !important;
   text-align: center;
 }
 
-.section-txtImage .section-images .image1 {
+#description .section-txtImage .section-images .image1 {
   width: 40vw;
 }
 
-.section-txtImage .text {
+#description .section-txtImage .text {
   margin: 0 30px !important;
 }
 
 @media (min-width: 768px) {
-  .section-txtImage .text {
+  #description .section-txtImage .text {
     margin: 50px auto !important;
     width: 100vw !important;
   }
 }
 
-.section-basic {
+#description .section-basic {
   margin: 100px 0;
 }
 
 @media (min-width: 768px) {
-  .section-basic {
+  #description .section-basic {
     margin: 180px auto;
   }
 }
 
 @media (min-width: 768px) {
-  .section-basic .section-banner .banner-title {
+  #description .section-basic .section-banner .banner-title {
     top: 150px;
   }
 }
 
-.section-background {
-  padding-top: 30px;
-  margin-bottom: -30px;
+#description .section-background {
   position: relative;
-  height: 550px;
 }
 
 @media (min-width: 768px) {
-  .section-background {
-    height: 390px;
-    padding: 90px 0;
+  #description .section-background {
+    padding: 20px 0 !important;
+    margin: 0;
   }
 }
 
-.section-background .section-image {
-  position: absolute;
-  width: 80vw;
-  top: 320px;
+#description .section-background .description-section .txt-description {
+  padding-top: 70px !important;
 }
 
 @media (min-width: 768px) {
-  .section-background .section-image {
-    width: 39vw;
-    top: -95px;
+  #description .section-background .description-section .txt-description {
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+#description .section-background .section-image {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  width: 100%;
+  padding: 0 !important;
+}
+
+@media (min-width: 765px) and (max-width: 1050px) {
+  #description .section-background .section-image {
+    height: 280px !important;
   }
 }
 
 @media (min-width: 768px) {
-  .section-background .description-section .half-col .v-centered .background-content {
+  #description .section-background .section-image {
+    position: absolute;
+    height: 400px;
+    width: auto;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+#description .section-background .img-description {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#description .section-background .img-mobile {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+@media (min-width: 768px) {
+  #description .section-background .img-mobile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  #description .section-background .description-section .half-col .v-centered .background-content {
     margin-top: 150px !important;
   }
 }
 
-.section-background2 {
+#description .section-background2 {
   background-color: #000000;
 <<<<<<< develop
 >>>>>>> Création contenu HTML + CSS mobile
@@ -1653,27 +1716,27 @@ html {
   margin-bottom: -50px;
 }
 
-.section-background2 .background-content .title-background2 {
+#description .section-background2 .background-content .title-background2 {
   text-align: center;
   margin-top: 40px;
   width: 230px !important;
 }
 
 @media (min-width: 768px) {
-  .section-background2 .background-content .title-background2 {
+  #description .section-background2 .background-content .title-background2 {
     width: 45vw !important;
     padding-top: 40px;
   }
 }
 
-.section-background2 .background-content .subtitle-background2 {
+#description .section-background2 .background-content .subtitle-background2 {
   font-size: 16px;
   text-align: center;
   margin: 20px 0;
 }
 
 @media (min-width: 768px) {
-  .section-background2 .background-content .burger__button {
+  #description .section-background2 .background-content .burger__button {
     margin: 40px auto 60px;
   }
 >>>>>>> Page responsive desktop + mobile

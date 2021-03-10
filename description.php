@@ -11,12 +11,13 @@ if( have_posts() ):
         $postId = get_the_ID();
         $postData = get_post($postID);
     ?>
+        <div id="description">
+            <div class="description-banner">
+                <?php get_template_part('template-parts/description-banner'); ?>
+            </div>
 
-        <div class="description-banner">
-            <?php get_template_part('template-parts/description-banner'); ?>
+            <?php get_template_part('template-parts/description-sections'); ?>
         </div>
-
-        <?php get_template_part('template-parts/description-sections'); ?>
 
         <?php
 

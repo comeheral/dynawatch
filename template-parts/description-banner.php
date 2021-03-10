@@ -23,4 +23,4 @@
 
 <a class="arrowlink text -white" href="<?php echo $link['url'] ?>"><p class="text-arrow">À partir de</p><strong><?php echo $price ?></strong><?php get_template_part('icons/gradient-arrow') ?></a>
 
-<!--<img class="description-banner-image" src="<?php echo($upload_dir); ?>/description-banner.png" alt="banner">-->
+<img class="description-banner-image" src="<?php echo($upload_dir); ?>/description-banner.png" alt="banner">
