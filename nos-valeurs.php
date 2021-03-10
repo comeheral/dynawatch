@@ -11,8 +11,7 @@ if( have_posts() ):
         $postId = get_the_ID();
         $postData = get_post($postID);
     ?>
-
-        <div id="nos-valeurs">
+        <div id='nos-valeurs'>
             <div class="nos-valeurs-banner">
                 <?php get_template_part('template-parts/nos-valeurs-banner'); ?>
             </div>

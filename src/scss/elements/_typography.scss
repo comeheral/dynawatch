@@ -32,6 +32,12 @@
         background: linear-gradient(94.33deg, $yellow 0%, $red 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-size : 30px;
+        margin : 0 30px;
+        @include media-breakpoint-up(md){
+            font-size : 48px;
+        }
+
     }
 
     &.-orange{
@@ -58,6 +64,13 @@
         }
 
     }
+
+    &.subtitle-white{
+        font-size : 18px;
+        @include media-breakpoint-up(md){
+            font-size : 36px;
+        }
+    }
 }
 
 .text{
@@ -68,6 +81,7 @@
     color: rgba(0, 0, 0, 0.5);
     line-height: 160%;
     margin-bottom: 20px;
+    
 
     @include media-breakpoint-up(lg){
         font-size: 20px;
