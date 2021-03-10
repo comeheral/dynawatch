@@ -15,27 +15,51 @@ get_header();
     <div class="row product-container">
 
         <div class="product third-col">
-            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire.png" alt="Accessoire">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-1.png" alt="Accessoire">
             <h2 class="product__title">Câble de charge magnétique vers USB-C pour Dynawatch (1m)</h2>
             <span class="product__price">35,00€</span>
         </div>
 
         <div class="product third-col">
-            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire.png" alt="Accessoire">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-2.png" alt="Accessoire">
             <h2 class="product__title">Chargeur double MagSafe</h2>
             <span class="product__price">149,00€</span>
         </div>
 
         <div class="product third-col">
-            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire.png" alt="Accessoire">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-3.png" alt="Accessoire">
             <h2 class="product__title">Coque Otterbox Exo Edge</h2>
             <span class="product__price">19,95€</span>
         </div>
 
         <div class="product third-col">
-            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire.png" alt="Accessoire">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-4.png" alt="Accessoire">
             <h2 class="product__title">Ecouteurs Powerbeats Pro sans fils</h2>
-            <span class="product__price">1249,95€</span>
+            <span class="product__price">249,95€</span>
+        </div>
+
+        <div class="product third-col">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-1.png" alt="Accessoire">
+            <h2 class="product__title">Câble de charge magnétique vers USB-C pour Dynawatch (1m)</h2>
+            <span class="product__price">35,00€</span>
+        </div>
+
+        <div class="product third-col">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-2.png" alt="Accessoire">
+            <h2 class="product__title">Chargeur double MagSafe</h2>
+            <span class="product__price">149,00€</span>
+        </div>
+
+        <div class="product third-col">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-3.png" alt="Accessoire">
+            <h2 class="product__title">Coque Otterbox Exo Edge</h2>
+            <span class="product__price">19,95€</span>
+        </div>
+
+        <div class="product third-col">
+            <img class="product__image" src="<?php echo($upload_dir); ?>/accessoire-4.png" alt="Accessoire">
+            <h2 class="product__title">Ecouteurs Powerbeats Pro sans fils</h2>
+            <span class="product__price">249,95€</span>
         </div>
     </div>
 

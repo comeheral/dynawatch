@@ -1,3 +1,53 @@
 .accessoires{
+    margin-top: 120px;
     text-align: center;
+
+    &__title{
+        margin-bottom: 40px;
+    }
+
+    &__text{
+        margin: auto;
+        padding: 0 30px;
+
+        @include media-breakpoint-up(md){
+            padding: 0;
+        }
+    }
+
+    &__images{
+        margin-bottom: 20px;
+    }
+
+    .product-container{
+        margin-top: 120px;
+        justify-content: flex-start;
+    }
+
+    .product{
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(md){
+            margin-bottom: 100px;
+        }
+
+        &__image{
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        &__title{
+            font-family: $title-font;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+
+        &__price{
+            font-family: $text-font;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
 }

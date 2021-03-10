@@ -22,14 +22,3 @@
       @media (min-width: 1140px) { @content; }
     }
 }
-
-banner__container
-  banner__title
-
-&__container{
-  &__title
-}
-
-banner__container__title
-
-&__title
