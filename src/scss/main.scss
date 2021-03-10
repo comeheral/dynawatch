@@ -24,9 +24,9 @@
 @import './pages/product';
 @import './pages/homepage';
 @import './pages/nos-valeurs';
-<<<<<<< develop
 @import './pages/404';
 @import './pages/faq';
+@import './pages/description';
 
 html{
     overflow-x: hidden;
@@ -37,10 +37,6 @@ html{
         }
     }
 }
-=======
-@import './pages/description';
-
->>>>>>> Création page Description
 
 body{
     /* margin-top: 60px; */
