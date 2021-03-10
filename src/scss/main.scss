@@ -27,6 +27,7 @@
 @import './pages/404';
 @import './pages/faq';
 @import './pages/cart';
+@import './pages/description';
 
 html{
     overflow-x: hidden;
@@ -37,10 +38,6 @@ html{
         }
     }
 }
-=======
-@import './pages/description';
-
->>>>>>> Création page Description
 
 body{
     /* margin-top: 60px; */

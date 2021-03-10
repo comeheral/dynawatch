@@ -2,55 +2,55 @@
 
 .nos-valeurs-banner{
     display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
     min-height: calc(100vh - 60px); // height of screen - height of header
 
-        .banner-title{
-            margin-top : -240px;
-            @include media-breakpoint-up(md){
-                margin: -150px 0 100px;
-            }
+    .banner-title{
+        margin-top : 0;
+        @include media-breakpoint-up(md){
+            padding-top : 100px;
+            height : 50px;
+        }
+    }
+
+
+    .div-valeurs-banner{
+        display: flex;
+        flex-direction : column-reverse;
+        @include media-breakpoint-up(md){
+            flex-direction : row;
         }
 
-        .banner{
+        
+        .banner-txt{
             @include media-breakpoint-up(md){
                 text-align : left;
+                margin-top : 50px;
+                margin-bottom : 100px;
             }
             .banner-mini-subtitle{
                 margin-top : 20px;
-                @include media-breakpoint-up(md){
-                
-                }
             }
     
         }
 
-       .banner-blob{
-        position: absolute;
-        z-index: -1;
-            &.blob-1{
-                top : 480px;
+        .banner-img{
+            .banner-blob{
+                width : 50vw; 
                 margin : 0 auto;
-                width : 50%;
-                height : auto;
                 @include media-breakpoint-up(md){
-                    width : 20vw;
-                    top : 200px;
-                    right : 150px;
-                    
+                    margin-bottom : 100px;
+                    margin-top : 50px;
+                    width : 30vw;
+                    align-items: center;
                 }
-            }
+            }           
         }
+    }
 
-        /*.banner{
-            text-align : left;
-            margin-left : 0;
-        }*/
+        
 }
 
 
@@ -107,6 +107,12 @@
             margin-top : 40px;
         }
     }
+
+    .img{
+        .section-image{
+            margin-top : 20px;
+        }
+    }
 }
 
 .section-center{
@@ -134,7 +140,7 @@
         z-index: -1;
         display : block;
         right : 0;
-        top : 2000px;
+        top : 2500px;
     }   
 }
 }
