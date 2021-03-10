@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit; ?>
                 <h1 class="cart__title">Mon panier</h1>
             </div>
             
-            <div class="row cart__row gutter-2">
+            <div class="cart__row">
                 <div class="col-12">
                     <ul class="cart__products">
                         <?php do_action( 'woocommerce_before_cart_contents' ); ?>
@@ -39,21 +39,20 @@ defined( 'ABSPATH' ) || exit; ?>
                                 
                                     <li class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
                                         <div class="cartProduct">
-                                            <?php
-                                                echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                                    'woocommerce_cart_item_remove_link',
-                                                    sprintf(
-                                                        '<a href="%s" class="cartProduct__delete" aria-label="%s" data-product_id="%s" data-product_sku="%s"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M962.2 13.3l24.4 24.4L34.4 989.8 10 965.5 962.2 13.3z"/><path d="M39.2 10L990 960.9 960.9 990 10.1 39.1 39.2 10z"/></svg></a>',
-                                                        esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-                                                        esc_html__( 'Remove this item', 'woocommerce' ),
-                                                        esc_attr( $product_id ),
-                                                        esc_attr( $_product->get_sku() )
-                                                    ),
-                                                    $cart_item_key
-                                                );
-                                            ?>
-                                            <div class="row">
-                                                <div class="col-12 col-md-4">
+                                            <div class="row cartProduct__item">
+                                                    <?php
+                                                        echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                                            'woocommerce_cart_item_remove_link',
+                                                            sprintf(
+                                                                '<a href="%s" class="cartProduct__delete" aria-label="%s" data-product_id="%s" data-product_sku="%s"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="27.2717" y="0.129883" width="3.80515" height="38.0515" transform="rotate(45 27.2717 0.129883)" fill="black"/><rect x="29.9625" y="27.0364" width="3.80515" height="38.0515" transform="rotate(135 29.9625 27.0364)" fill="black"/></svg></a>',
+                                                                esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+                                                                esc_html__( 'Remove this item', 'woocommerce' ),
+                                                                esc_attr( $product_id ),
+                                                                esc_attr( $_product->get_sku() )
+                                                            ),
+                                                            $cart_item_key
+                                                        );
+                                                    ?>
                                                     <div class="cartProduct__img">
                                                         <?php
                                                         $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -65,8 +64,6 @@ defined( 'ABSPATH' ) || exit; ?>
                                                         }
                                                         ?>
                                                     </div>
-                                                </div>
-                                                <div class="col-12 col-md-8">
                                                     <div class="cartProduct__content">
                                                     <?php  
                                                         
@@ -132,7 +129,6 @@ defined( 'ABSPATH' ) || exit; ?>
                                                     
                                                 
                                                     </div>
-                                                </div>
                                                 
                                                 
                                                 
