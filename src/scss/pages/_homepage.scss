@@ -6,7 +6,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    min-height: calc(100vh - 60px); // height of screen - height of header
+    min-height: 100vh;
 
     .banner-title{
         max-width: 900px;
