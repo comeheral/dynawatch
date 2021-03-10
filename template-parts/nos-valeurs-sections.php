@@ -76,7 +76,7 @@ $upload_dir = wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */;
                 <div class="banner-blob-2">                
                     <img class="blob-2" src="<?php echo($upload_dir); ?>/nos-valeurs-blob-2.png" alt="Blob">
                 </div>
-            </div>
+        
             
 
             <?php elseif($type === 'quotes') : ?>
