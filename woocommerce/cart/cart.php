@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit; ?>
             </div>
             
             <div class="row cart__row gutter-2">
-                <div class="col-12 col-md-12 col-l-8 col-xl-7">
+                <div class="col-12">
                     <ul class="cart__products">
                         <?php do_action( 'woocommerce_before_cart_contents' ); ?>
                         <?php
@@ -148,7 +148,7 @@ defined( 'ABSPATH' ) || exit; ?>
                     <button type="submit" class="button -dark button__update__cart" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
            
                 </div>
-                <div class="col-12 col-md-12 col-l-4 col-xl-5">
+                <div class="col-12">
                     <div class="cart__summary summary">
                         <div class="summary__content"> 
                             <div>
