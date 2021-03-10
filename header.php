@@ -67,7 +67,7 @@
 
             <a class="button nav__button -small -gradient" href="<?php bloginfo("url"); ?>/produit/Dynawatch">Acheter</a>
 
-            <a class="nav__icon cart" href="<?php bloginfo("url"); ?>/panier">
+            <a class="nav__icon" href="<?php bloginfo("url"); ?>/panier">
                 <?php get_template_part('icons/cart') ?>
             </a>
         </div>

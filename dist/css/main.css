@@ -1012,7 +1012,7 @@ ul {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 }
 
 .home-banner .banner-title {
@@ -1557,7 +1557,7 @@ ul {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .cart .row {
@@ -1674,6 +1674,21 @@ ul {
 .wc-proceed-to-checkout .button {
   background: linear-gradient(94.33deg, #FF7D78 0%, #FFC46B 100%) !important;
   box-shadow: 0px 4px 10px rgba(255, 162, 114, 0.4) !important;
+}
+
+.cart__empty {
+  flex-direction: column;
+  text-align: center;
+}
+
+.cart__empty p {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cart__empty .button {
+  margin: 40px auto 0 auto !important;
 }
 
 html {

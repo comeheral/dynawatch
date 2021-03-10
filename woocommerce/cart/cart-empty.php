@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;?>
     <div class="cart__header">
         <h1 class="cart__title">Mon panier</h1>
     </div>
-    <div class="cart__empty">
+    <div class="cart__empty row">
         <p>Votre panier est actuellement vide.</p>
     <?php 
     /*
@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit;?>
 
     if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
         <p class="return-to-shop">
-        <a class="button wc-backward" href="<?php echo get_home_url(); ?>">Retour à l'accueil</a>
+        <a class="button -dark wc-backward" href="<?php echo get_home_url(); ?>">Retour à l'accueil</a>
            
         </p>
     <?php endif; ?>

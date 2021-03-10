@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit; ?>
         <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
             <?php do_action( 'woocommerce_before_cart_table' ); ?>
             <div class="cart__header">
-                <h1 class="cart__title">Mon panier</h1>
+                <h1 class="cart__title">Panier</h1>
             </div>
             
             <div class="cart__row">
