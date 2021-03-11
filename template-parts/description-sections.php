@@ -84,8 +84,8 @@
                     <h3 class="banner-subtitle title -secondary -white"><?php echo $subtitle ?></h3>
 
                     <img class="section-image-background" src="<?php echo $backgroundimage['sizes']['large'] ?>" alt="<?php echo $backgroundimage['alt'] ?>">
-    
-                    <?php if($button['url'] != "") : ?>
+
+                    <?php if($button != "") : ?>
                     <a class="button -gradient" href="<?php echo $button['url'] ?>">
                         <?php echo $button['title'] ?>
                     </a>
