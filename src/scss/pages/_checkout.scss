@@ -1,0 +1,76 @@
+.checkout{
+    padding: 20px;
+    margin-top: 60px;
+    font-family: $text-font;
+    font-size: 16px;
+
+    &__title{
+        display: none;
+    }
+
+    .woocommerce-additional-fields{
+        display: none;
+    }
+
+    .woocommerce-input-wrapper{
+        font-family: $text-font;
+    }
+
+    .billing{
+        width: 100%;
+        max-width: 660px;
+    }
+
+    h3{
+        font-family: $title-font;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .input-text, .country_select{
+        font-family: $text-font !important;
+        font-size: 16px !important;
+        background: #EBEBEB !important;
+        border-radius: 6px !important;
+        border: none !important;
+        padding: 15px 20px !important;
+    }
+
+    label{
+        font-family: $text-font;
+        font-size: 16px;
+    }
+
+    #order_review{
+        width: 100%;
+    }
+
+    .summary{
+        margin-top: 40px;
+        table{
+            margin: auto;
+            width: 100%;
+            max-width: 660px;
+        }
+        th{
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        td{
+            padding-bottom: 20px;
+        }
+    }
+
+    .payment_methods, .woocommerce-terms-and-conditions-wrapper{
+        display: none;
+    }
+
+    #place_order{
+        background: $dark !important;
+        margin: 40px auto 0 auto;
+        width: 260px !important;
+        height: 60px !important;
+        border-radius: 6px !important;
+    }
+}
