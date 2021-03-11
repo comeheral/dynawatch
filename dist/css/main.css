@@ -1314,16 +1314,9 @@ ul {
   text-align: center;
   position: relative;
   height: 100vh;
-}
-
-#description .description-banner .banner-title {
-  padding-top: 100px;
-}
-
-@media (min-width: 768px) {
-  #description .description-banner .banner-title {
-    padding-top: 200px !important;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #description .description-banner .description-banner-image {
