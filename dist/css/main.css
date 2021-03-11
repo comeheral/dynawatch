@@ -1361,25 +1361,35 @@ ul {
 
 #description .section-banner {
   position: relative;
-  margin-bottom: 100px;
+  padding: 80px 0;
+}
+
+@media (min-width: 768px) {
+  #description .section-banner {
+    padding: 200px 0;
+  }
 }
 
 #description .section-banner .section-image-background {
   position: absolute;
   z-index: -1;
-  top: -35px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #description .section-banner .banner-title {
   font-size: 30px;
-  margin: 80px auto 0;
+  /* margin : 80px auto 0; */
   text-align: center;
 }
 
 @media (min-width: 768px) {
   #description .section-banner .banner-title {
     font-size: 70px;
-    padding-top: 200px;
+    /* padding-top : 200px; */
   }
 }
 
@@ -1393,6 +1403,10 @@ ul {
   #description .section-banner .banner-subtitle {
     font-size: 40px;
   }
+}
+
+#description .section-banner .button {
+  margin: auto;
 }
 
 #description .section-image-background {
@@ -1412,12 +1426,6 @@ ul {
   padding-bottom: 30px;
 }
 
-@media (min-width: 768px) {
-  #description .section-txtImage {
-    margin-top: 350px;
-  }
-}
-
 #description .section-txtImage .section-images {
   margin: 20px 5vw 0 5vw !important;
   text-align: center;
@@ -1428,7 +1436,7 @@ ul {
 }
 
 #description .section-txtImage .text {
-  margin: 0 30px !important;
+  margin: 30px !important;
 }
 
 @media (min-width: 768px) {
