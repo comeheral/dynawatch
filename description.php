@@ -24,10 +24,11 @@ if( have_posts() ):
     endwhile;
 endif;
 
-
-get_footer();
-
 ?>
+
+<div class="description-footer">
+    <?php get_footer(); ?>
+</div>
 
 
 

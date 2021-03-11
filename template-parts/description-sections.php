@@ -85,6 +85,11 @@
 
                     <img class="section-image-background" src="<?php echo $backgroundimage['sizes']['large'] ?>" alt="<?php echo $backgroundimage['alt'] ?>">
     
+                    <?php if($button['url'] != "") : ?>
+                    <a class="button -gradient" href="<?php echo $button['url'] ?>">
+                        <?php echo $button['title'] ?>
+                    </a>
+                    <?php endif; ?>
 
                 </div>
 

@@ -263,8 +263,12 @@
                     </div>
                 </div>
 
-                <!-- <p class="text -small">Vous ne savez pas quelle taille de bracelet vous correspond ?<br/>
-                    Déterminez la taille de votre poignet grâce à notre outil de mesure que vous pouvez imprimer.</p> -->
+                <p class="text -small">Vous ne savez pas quelle taille de bracelet vous correspond ?<br/>
+                    Déterminez la taille de votre poignet grâce à notre outil de mesure que vous pouvez imprimer.</p>
+
+                <a class="arrowlink link-size -custom">Déterminer votre taille
+                    <?php get_template_part('icons/next-arrow') ?>
+                </a>
 
                 <span class="price js-price">À partir de <strong><?php echo $price ?>€</strong></span>
 
