@@ -1,0 +1,77 @@
+.faq{
+    margin-top: 80px;
+    padding: 30px;
+    text-align: center;
+
+    @include media-breakpoint-up(md){
+        margin-top: 120px;
+    }
+
+    &__title{
+        display: inline-block;
+        font-family: $title-font;
+        font-size: 80px;
+        background: linear-gradient(94.33deg, $yellow 0%, $red 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 60px;
+
+        @include media-breakpoint-up(md){
+            font-size: 120px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &__content{
+        text-align: left;
+
+        @include media-breakpoint-up(md){
+            max-width: 800px;
+            margin: auto;
+        }
+    }
+
+    h2{
+        font-family: $title-font;
+        font-size: 20px;
+        line-height: 160%;
+        color: $black;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(md){
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    p{
+        font-family: $text-font;
+        font-size: 14px;
+        line-height: 160%;
+        color: #888888;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(md){
+            font-size: 18px;
+            margin-bottom: 80px;
+        }
+    }
+
+    &__contact{
+        margin-top: 80px;
+        font-family: $text-font;
+        font-size: 18px;
+        line-height: 160%;
+        color: #888888;
+
+        a{
+            color: $black;
+            text-decoration: none;
+        }
+
+        @include media-breakpoint-up(md){
+            margin-top: 120px;
+            font-size: 22px;
+        }
+    }
+}

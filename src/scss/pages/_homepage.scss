@@ -1,0 +1,117 @@
+.home-banner{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+
+    .banner-title{
+        max-width: 900px;
+    }
+
+    .banner-price{
+        font-family: $text-font;
+        font-size: 16px;
+        font-weight: 300;
+        color: $dark;
+
+        strong{font-weight: 500;}
+    }
+
+    .banner-blob{
+        position: absolute;
+        z-index: -1;
+        width: 140px;
+
+        &.blob-1{
+            top: 0;
+            right: 0;
+        }
+        &.blob-2{
+            bottom: 200px;
+            left: 0;
+        }
+
+        @include media-breakpoint-up(md){
+            width: auto;
+
+            &.blob-2{
+                bottom: 60px;
+            }
+        }
+    }
+}
+
+.home-section{
+    margin-top: 140px;
+
+    .section-image{
+        width: 100%;
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md){
+            margin: 0;
+        }
+    }
+
+    &.section-background{
+        margin: 0;
+        max-width: 100%;
+        @media screen and (max-width: 767px){
+            flex-direction: column-reverse !important;
+        }
+        .half-col{
+            padding: 0;
+            align-items: center;
+            @include media-breakpoint-up(md){height: 500px;}
+        }
+        .background-content{
+            max-width: 360px;
+            padding: 30px;
+
+            .text{
+                color: $white;
+                font-weight: 300;
+            }
+
+            .arrowlink{
+                color: $white;
+                path{fill: $white;}
+            }
+        }
+        
+        .section-image{
+            margin: 0;
+            @include media-breakpoint-up(md){
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+
+    &.section-features{
+
+        .features-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 60px;
+
+            svg{height: 70px;}
+            .title{
+                font-size: 24px;
+                margin: 10px 0;
+            }
+            .text{
+                font-size: 16px;
+                max-width: 300px;
+            }
+        }
+        
+    }
+}
