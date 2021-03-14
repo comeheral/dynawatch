@@ -21,26 +21,6 @@ $upload_dir = wp_get_upload_dir()["baseurl"] . "/" . $prefix /* . "-" */;
             $colorText = get_sub_field('nos_valeurs_color_text');
 
 
-
-
-            // Do something...
-
-            /* echo '<p>';
-            echo $title;
-            echo '</p>';
-
-            echo '<p>';
-            echo $description;
-            echo '</p>'; */
-
-            /* echo '<pre>';
-            print_r($order);
-            echo '</pre>'; */
-
-            /* echo '<pre>';
-            print_r($link);
-            echo '</pre>'; */
-
             ?>
 
             <?php if($type === 'basic') : ?>
