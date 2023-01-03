@@ -25,6 +25,10 @@ jQuery(document).ready(function(){
     }
 
     calculateHeight();
+
+    setTimeout(function(){
+      openPopup()
+    }, 2000)
 })
 
 // On resize
@@ -238,3 +242,10 @@ jQuery('.variations_form').on("woocommerce_update_variation_values", function(){
         }
     })
 });
+
+
+// INFO POP-UP
+function openPopup(){
+  console.log('open pop-up')
+  jQuery('.info-popup-container').addClass('is-active');
+}
